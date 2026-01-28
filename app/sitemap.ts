@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllDocsItems } from "@/lib/docs-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://nyxhoraui.com";
+    const baseUrl = "https://ui.nyxhora.com";
 
     const allDocs = getAllDocsItems();
 

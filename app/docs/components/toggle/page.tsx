@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Toggle",
+    description: "A two-state button that can be either on or off.",
+};
 
 export default function ToggleDocsPage() {
     return (

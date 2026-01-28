@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Bento Grid",
+    description: "A bento-style grid layout component.",
+};
 
 export default function BentoGridDocsPage() {
     return (

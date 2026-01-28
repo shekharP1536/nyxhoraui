@@ -1,8 +1,12 @@
-"use client";
-
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Code2 } from "lucide-react";
 import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Button",
+    description: "Displays a button or a component that looks like a button.",
+};
 
 export default function ButtonDocsPage() {
     return (

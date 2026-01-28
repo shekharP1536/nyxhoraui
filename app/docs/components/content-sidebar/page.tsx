@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Content Sidebar",
+    description: "A sidebar designed for navigating content structures.",
+};
 
 export default function ContentSidebarDocsPage() {
     return (

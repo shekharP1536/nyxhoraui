@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Theme Toggle",
+    description: "A button to toggle between light and dark modes.",
+};
 
 export default function ThemeToggleDocsPage() {
     return (

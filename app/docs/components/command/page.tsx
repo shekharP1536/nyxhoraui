@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Command",
+    description: "Fast, composable, unstyled command menu for React.",
+};
 
 export default function CommandDocsPage() {
     return (

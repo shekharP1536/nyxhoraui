@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 // import { IconPicker } from "@/components/ui/icon-picker";
+
+export const metadata: Metadata = {
+    title: "Icon Picker",
+    description: "A component to select icons from a library.",
+};
 
 export default function IconPickerDocsPage() {
     return (

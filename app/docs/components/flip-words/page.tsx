@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Flip Words",
+    description: "A text animation that flips through a list of words.",
+};
 
 export default function FlipWordsDocsPage() {
     return (

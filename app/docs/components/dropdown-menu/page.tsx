@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Dropdown Menu",
+    description: "Displays a menu to the user—such as a set of actions or functions—triggered by a button.",
+};
 
 export default function DropdownMenuDocsPage() {
     return (

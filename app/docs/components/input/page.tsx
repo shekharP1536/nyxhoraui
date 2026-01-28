@@ -1,9 +1,13 @@
-"use client";
-
+import { Metadata } from "next";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Search, Lock } from "lucide-react";
 import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Input",
+    description: "Displays a form input field or a component that looks like an input field.",
+};
 
 export default function InputDocsPage() {
     return (

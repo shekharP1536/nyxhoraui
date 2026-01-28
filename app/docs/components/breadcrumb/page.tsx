@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 // import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+
+export const metadata: Metadata = {
+    title: "Breadcrumb",
+    description: "Displays the path to the current resource using a hierarchy of links.",
+};
 
 export default function BreadcrumbDocsPage() {
     return (

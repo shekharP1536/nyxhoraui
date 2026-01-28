@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 import { User } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Logo",
+    description: "A branded logo component.",
+};
 
 export default function LogoDocsPage() {
     return (

@@ -1,5 +1,4 @@
-"use client";
-
+import { Metadata } from "next";
 import Footer from "@/components/ui/footer";
 import { CodeBlockWrapper, DocsHeader } from "@/components/ui/docs-documentation";
 
@@ -113,6 +112,11 @@ const Footer = () => {
 };
 
 export default Footer;`;
+
+export const metadata: Metadata = {
+    title: "Footer",
+    description: "A comprehensive footer component with brand section, social links, navigation columns, and legal links. Fully responsive and customizable.",
+};
 
 export default function FooterDocsPage() {
   return (

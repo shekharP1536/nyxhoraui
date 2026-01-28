@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Background Lines",
+    description: "Animated background lines pattern.",
+};
 
 export default function BackgroundLinesDocsPage() {
     return (

@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Avatar",
+    description: "An image element with a fallback for representing the user.",
+};
 
 export default function AvatarDocsPage() {
     return (

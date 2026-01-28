@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Expandable Card",
+    description: "Card content that can expand to show more details.",
+};
 
 export default function ExpandableCardDocsPage() {
     return (

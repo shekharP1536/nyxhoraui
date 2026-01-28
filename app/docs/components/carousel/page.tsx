@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Carousel",
+    description: "A carousel with motion and swipe built using Embla.",
+};
 
 export default function CarouselDocsPage() {
     return (

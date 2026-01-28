@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Smooth Cursor",
+    description: "A smooth custom cursor that follows mouse movement.",
+};
 
 export default function SmoothCursorDocsPage() {
     return (

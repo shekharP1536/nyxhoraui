@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Sparkles",
+    description: "Sparkle particle effects.",
+};
 
 export default function SparklesDocsPage() {
     return (

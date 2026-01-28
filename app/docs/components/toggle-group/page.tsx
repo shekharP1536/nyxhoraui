@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Toggle Group",
+    description: "A set of two-state buttons that can be toggled on or off.",
+};
 
 export default function ToggleGroupDocsPage() {
     return (

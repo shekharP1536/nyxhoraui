@@ -1,8 +1,12 @@
-"use client";
-
+import { Metadata } from "next";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Label",
+    description: "Renders an accessible label for form controls.",
+};
 
 export default function LabelDocsPage() {
     return (

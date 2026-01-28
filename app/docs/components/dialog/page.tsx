@@ -1,10 +1,14 @@
-"use client";
-
+import { Metadata } from "next";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Dialog",
+    description: "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
+};
 
 export default function DialogDocsPage() {
     return (

@@ -1,8 +1,12 @@
-"use client";
-
+import { Metadata } from "next";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Textarea",
+    description: "A multi-line text input component.",
+};
 
 export default function TextareaDocsPage() {
     return (

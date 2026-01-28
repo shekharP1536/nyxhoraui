@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Cover",
+    description: "A cover component for displaying featured images and headers. Documentation coming soon.",
+};
 
 export default function CoverDocsPage() {
     return (

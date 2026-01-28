@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { Separator } from "@/components/ui/separator";
 import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Separator",
+    description: "Visually or semantically separates content.",
+};
 
 export default function SeparatorDocsPage() {
     return (

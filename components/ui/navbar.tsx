@@ -29,7 +29,7 @@ export const Navbar = () => {
     {
       label: "Features",
       icon: Sparkles,
-      href: "/features",
+      href: "https://www.nyxhora.com/features",
       active: pathname === "/features",
     },
     {
@@ -41,13 +41,13 @@ export const Navbar = () => {
     {
       label: "Template",
       icon: Store,
-      href: "/market",
+      href: "https://www.nyxhora.com/market",
       active: pathname === "/market" || pathname === "/templates",
     },
     {
       label: "About",
       icon: Info,
-      href: "/about",
+      href: "https://www.nyxhora.com/about",
       active: pathname === "/about",
     },
   ];

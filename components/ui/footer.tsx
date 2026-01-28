@@ -75,7 +75,7 @@ const Footer = () => {
                             {["Features", "Pricing"].map((item) => (
                                 <li key={item}>
                                     <Link
-                                        href={`/${item.toLowerCase()}`}
+                                        href={`https://www.nyxhora.com/${item.toLowerCase()}`}
                                         className="text-sm text-muted-foreground hover:text-foreground"
                                     >
                                         {item}
@@ -84,7 +84,7 @@ const Footer = () => {
                             ))}
                             <li>
                                 <Link
-                                    href="/tools"
+                                    href="https://www.nyxhora.com/tools"
                                     className="text-sm text-muted-foreground hover:text-foreground"
                                 >
                                     Free Tools
@@ -92,7 +92,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/faces"
+                                    href="https://www.nyxhora.com/faces"
                                     className="text-sm text-muted-foreground hover:text-foreground"
                                 >
                                     Avatar Creator
@@ -100,7 +100,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/market"
+                                    href="https://www.nyxhora.com/market"
                                     className="text-sm text-muted-foreground hover:text-foreground"
                                 >
                                     Templates
@@ -108,7 +108,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/blog"
+                                    href="https://www.nyxhora.com/blog"
                                     className="text-sm text-muted-foreground hover:text-foreground"
                                 >
                                     Blog
@@ -126,7 +126,7 @@ const Footer = () => {
                             {["About", "Contact"].map((item) => (
                                 <li key={item}>
                                     <Link
-                                        href={`/${item.toLowerCase()}`}
+                                        href={`https://www.nyxhora.com/${item.toLowerCase()}`}
                                         className="text-sm text-muted-foreground hover:text-foreground"
                                     >
                                         {item}
@@ -135,7 +135,7 @@ const Footer = () => {
                             ))}
                             <li>
                                 <Link
-                                    href="https://github.com/shekharP1536/nyxhoranew"
+                                    href="https://github.com/shekharP1536/nyxhoraui"
                                     target="_blank"
                                     className="text-sm text-muted-foreground hover:text-foreground flex items-center"
                                 >
@@ -154,7 +154,7 @@ const Footer = () => {
                         <ul className="space-y-3">
                             <li>
                                 <Link
-                                    href="/docs"
+                                    href="https://ui.nyxhora.com/docs"
                                     target="_blank"
                                     className="text-sm text-muted-foreground hover:text-foreground flex items-center"
                                 >
@@ -192,19 +192,19 @@ const Footer = () => {
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0">
                             <Link
-                                href="/privacy"
+                                href="https://www.nyxhora.com/privacy"
                                 className="text-xs text-muted-foreground hover:text-foreground"
                             >
                                 Privacy Policy
                             </Link>
                             <Link
-                                href="/terms"
+                                href="https://www.nyxhora.com/terms"
                                 className="text-xs text-muted-foreground hover:text-foreground"
                             >
                                 Terms of Service
                             </Link>
                             <Link
-                                href="/cookies"
+                                href="https://www.nyxhora.com/cookies"
                                 className="text-xs text-muted-foreground hover:text-foreground"
                             >
                                 Cookie Policy

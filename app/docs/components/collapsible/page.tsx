@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 // import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
+
+export const metadata: Metadata = {
+    title: "Collapsible",
+    description: "An interactive component which expands/collapses a panel.",
+};
 
 export default function CollapsibleDocsPage() {
     return (

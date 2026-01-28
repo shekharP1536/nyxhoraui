@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, DocsPreview, DocsProps, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+export const metadata: Metadata = {
+    title: "Select",
+    description: "Displays a list of options for the user to pick from—triggered by a button.",
+};
 
 export default function SelectDocsPage() {
     return (

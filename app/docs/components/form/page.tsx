@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Form",
+    description: "Building forms with React Hook Form and Zod.",
+};
 
 export default function FormDocsPage() {
     return (

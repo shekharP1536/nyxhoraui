@@ -1,8 +1,12 @@
-"use client";
-
+import { Metadata } from "next";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal, AlertCircle, CheckCircle2, Info, AlertTriangle } from "lucide-react";
 import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Alert",
+    description: "Displays a callout for user attention with various styles.",
+};
 
 export default function AlertDocsPage() {
     return (

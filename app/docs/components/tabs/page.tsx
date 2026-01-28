@@ -1,10 +1,14 @@
-"use client";
-
+import { Metadata } from "next";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Tabs",
+    description: "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+};
 
 export default function TabsDocsPage() {
     return (

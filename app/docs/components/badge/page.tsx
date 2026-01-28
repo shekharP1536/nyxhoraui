@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Badge",
+    description: "Displays a badge or a component that looks like a badge.",
+};
 
 export default function BadgeDocsPage() {
     return (

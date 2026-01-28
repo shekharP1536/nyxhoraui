@@ -1,9 +1,13 @@
-"use client";
-
+import { Metadata } from "next";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
 import { Info, HelpCircle, Plus } from "lucide-react";
 import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Tooltip",
+    description: "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+};
 
 export default function TooltipDocsPage() {
     return (

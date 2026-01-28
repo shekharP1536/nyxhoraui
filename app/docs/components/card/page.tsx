@@ -1,11 +1,15 @@
-"use client";
-
+import { Metadata } from "next";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Bell, CreditCard } from "lucide-react";
 import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Card",
+    description: "Displays a card with header, content, and footer sections.",
+};
 
 export default function CardDocsPage() {
     return (

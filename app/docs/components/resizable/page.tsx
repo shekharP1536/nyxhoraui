@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Resizable",
+    description: "Accessible resizable panel groups and layouts.",
+};
 
 export default function ResizableDocsPage() {
     return (

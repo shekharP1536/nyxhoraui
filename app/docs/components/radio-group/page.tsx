@@ -1,8 +1,12 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, DocsPreview, DocsProps, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
+
+export const metadata: Metadata = {
+    title: "Radio Group",
+    description: "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
+};
 
 export default function RadioGroupDocsPage() {
     return (

@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "TOC Sidebar",
+    description: "Table of Contents sidebar for documentation pages.",
+};
 
 export default function TocSidebarDocsPage() {
     return (

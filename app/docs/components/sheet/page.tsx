@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Sheet",
+    description: "Extends the Dialog component to display content that complements the main screen.",
+};
 
 export default function SheetDocsPage() {
     return (

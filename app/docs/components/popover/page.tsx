@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Popover",
+    description: "Displays rich content in a portal, triggered by a button.",
+};
 
 export default function PopoverDocsPage() {
     return (

@@ -1,7 +1,11 @@
-"use client";
-
+import { Metadata } from "next";
 import { Skeleton } from "@/components/ui/skeleton";
 import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Skeleton",
+    description: "Use to show a placeholder while content is loading.",
+};
 
 export default function SkeletonDocsPage() {
     return (

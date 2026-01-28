@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Animated Shiny Text",
+    description: "Text with an animated shimmering effect.",
+};
 
 export default function AnimatedShinyTextDocsPage() {
     return (

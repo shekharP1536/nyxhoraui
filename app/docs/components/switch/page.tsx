@@ -1,8 +1,12 @@
-"use client";
-
+import { Metadata } from "next";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Switch",
+    description: "A control that allows the user to toggle between checked and not checked.",
+};
 
 export default function SwitchDocsPage() {
     return (

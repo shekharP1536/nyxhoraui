@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Comet Card",
+    description: "A card with an animated comet effect border.",
+};
 
 export default function CometCardDocsPage() {
     return (

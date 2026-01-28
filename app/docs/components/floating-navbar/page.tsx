@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+
+export const metadata: Metadata = {
+    title: "Floating Navbar",
+    description: "A floating navigation bar that appears on scroll.",
+};
 
 export default function FloatingNavbarDocsPage() {
     return (
