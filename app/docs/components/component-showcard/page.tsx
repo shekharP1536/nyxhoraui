@@ -1,9 +1,13 @@
-"use client";
-
+import { Metadata } from "next";
 import { ComponentShowcard, ShowcardGrid } from "@/components/ui/component-showcard";
 import { Button } from "@/components/ui/button";
 import { CodeBlockWrapper, DocsHeader, DocsProps, ComponentPreview } from "@/components/ui/docs-documentation";
 import { Sparkles, Terminal, Copy } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Component Showcard",
+    description: "A highly customizable card component for showcasing UI elements with gradients, badges, and interactive previews.",
+};
 
 export default function ComponentShowcardDocsPage() {
     return (

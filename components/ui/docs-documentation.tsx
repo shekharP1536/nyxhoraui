@@ -1,3 +1,5 @@
+"use client";
+
 import { Check, ChevronDown, ChevronLeft, ChevronRight, Code2, Copy, Eye, FileText, ExternalLink } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
