@@ -1,12 +1,10 @@
-"use client";
 
-import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+import { ComponentSource } from "@/components/ui/component-source";
 
 export default function CheckboxDocsPage() {
-    const [checked, setChecked] = useState(false);
 
     return (
         <div className="space-y-10">
@@ -120,11 +118,87 @@ export default function MyComponent() {
 </div>`}
                 />
             </section>
+            <DocsPreview
+                title="On Success Color"
+                variant="Blue"
+                previewCode={
+                    <div className="flex items-center space-x-2">
+                        <Checkbox id="termsBlue" onSuccessColor="blue" defaultChecked />
+                        <Label htmlFor="termsBlue">Accept terms and conditions</Label>
+                    </div>
+                }
+                code={`<div className="flex items-center space-x-2">
+  <Checkbox id="termsBlue" onSuccessColor="blue" defaultChecked />
+  <Label htmlFor="termsBlue">Accept terms and conditions</Label>
+</div>`}
+            />
+            <DocsPreview
+                variant="Red"
+                previewCode={
+                    <div className="flex items-center space-x-2">
+                        <Checkbox id="termsRed" onSuccessColor="red" defaultChecked />
+                        <Label htmlFor="termsRed">Accept terms and conditions</Label>
+                    </div>
+                }
+                code={`<div className="flex items-center space-x-2">
+  <Checkbox id="termsRed" onSuccessColor="red" defaultChecked />
+  <Label htmlFor="termsRed">Accept terms and conditions</Label>
+</div>`}
+            />
+            <DocsPreview
+                variant="Green"
+                previewCode={
+                    <div className="flex items-center space-x-2">
+                        <Checkbox id="termsGreen" onSuccessColor="green" defaultChecked />
+                        <Label htmlFor="termsGreen">Accept terms and conditions</Label>
+                    </div>
+                }
+                code={`<div className="flex items-center space-x-2">
+  <Checkbox id="termsGreen" onSuccessColor="green" defaultChecked />
+  <Label htmlFor="termsGreen">Accept terms and conditions</Label>
+</div>`}
+            />
+            <DocsPreview
+
+                variant="Purple"
+                previewCode={
+                    <div className="flex items-center space-x-2">
+                        <Checkbox id="termsPurple" onSuccessColor="purple" defaultChecked />
+                        <Label htmlFor="termsPurple">Accept terms and conditions</Label>
+                    </div>
+                }
+                code={`<div className="flex items-center space-x-2">
+  <Checkbox id="termsPurple" onSuccessColor="purple" defaultChecked />
+  <Label htmlFor="termsPurple">Accept terms and conditions</Label>
+</div>`}
+            />
+            <DocsPreview
+
+                variant="Orange"
+                previewCode={
+                    <div className="flex items-center space-x-2">
+                        <Checkbox id="termsOrange" onSuccessColor="orange" defaultChecked />
+                        <Label htmlFor="termsOrange">Accept terms and conditions</Label>
+                    </div>
+                }
+                code={`<div className="flex items-center space-x-2">
+  <Checkbox id="termsOrange" onSuccessColor="orange" defaultChecked />
+  <Label htmlFor="termsOrange">Accept terms and conditions</Label>
+</div>`}
+            />
+            <CodeBlockWrapper
+                title="Dependencies"
+                code={`npm install @radix-ui/react-checkbox`}
+                language="bash"
+            />
+            <ComponentSource filePath="components/ui/checkbox.tsx" />
+
 
             <DocsProps
                 props={[
                     { name: "checked", type: "boolean", description: "Controlled checked state" },
-                    { name: "defaultChecked", type: "boolean", defaultValue: "false", description: "Default checked state" },
+                    { name: "onSuccessColor", type: "'red' | 'blue' | 'green' | 'purple' | 'orange' | 'default'", defaultValue: "default", description: "Color of the checkbox" },
+                    { name: "defaultChecked", type: "boolean", defaultValue: "true", description: "Default checked state" },
                     { name: "onCheckedChange", type: "(checked: boolean) => void", description: "Called when checked state changes" },
                     { name: "disabled", type: "boolean", defaultValue: "false", description: "Disable the checkbox" },
                 ]}

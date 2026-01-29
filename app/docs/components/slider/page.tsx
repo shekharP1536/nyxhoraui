@@ -1,12 +1,10 @@
-"use client";
-
-import { useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
-import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+import { ComponentSource } from "@/components/ui/component-source";
+import { SliderDemo } from "./slider-interactivity";
 
 export default function SliderDocsPage() {
-    const [value, setValue] = useState([50]);
     return (
         <div className="space-y-10">
             <DocsHeader title="Slider" description="An input for selecting a value from a range." />
@@ -32,12 +30,7 @@ export default function MyComponent() {
 
                 <DocsPreview
                     variant="With Value Display"
-                    previewCode={
-                        <div className="w-[60%] space-y-4">
-                            <div className="flex justify-between"><Label>Volume</Label><span className="text-sm">{value[0]}%</span></div>
-                            <Slider value={value} onValueChange={setValue} max={100} step={1} />
-                        </div>
-                    }
+                    previewCode={<SliderDemo />}
                     code={`const [value, setValue] = useState([50])
 
 <div className="flex justify-between">
@@ -53,6 +46,12 @@ export default function MyComponent() {
                     code={`<Slider defaultValue={[25, 75]} max={100} step={1} />`}
                 />
             </section>
+            <CodeBlockWrapper
+                title="Dependencies"
+                language="bash"
+                code={`npm install @radix-ui/react-slider`}
+            />
+            <ComponentSource filePath="components/ui/slider.tsx" />
         </div>
     );
 }
