@@ -16,6 +16,7 @@ import {
     ArrowRight,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { Badge } from "./badge";
 
 interface DocsSidebarProps {
     className?: string;
@@ -335,19 +336,19 @@ function CategorySection({
                         <span className="truncate">{item.title}</span>
                         <div className="flex items-center gap-1.5">
                             {item.isNew && (
-                                <span className="px-1.5 py-0.5 text-[10px] font-medium bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full">
+                                <Badge variant="outline">
                                     New
-                                </span>
+                                </Badge>
                             )}
                             {item.isUpdated && (
-                                <span className="px-1.5 py-0.5 text-[10px] font-medium bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full">
+                                <Badge variant="outline">
                                     Updated
-                                </span>
+                                </Badge>
                             )}
                             {item.special && (
-                                <span className="px-1.5 py-0.5 text-[10px] font-medium bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-full">
+                                <Badge variant="outline">
                                     special
-                                </span>
+                                </Badge>
                             )}
                         </div>
                     </Link>

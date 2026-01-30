@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Bell, CreditCard } from "lucide-react";
-import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 
 export const metadata: Metadata = {
     title: "Card",
@@ -195,45 +195,53 @@ export default function MyComponent() {
 </Card>`}
                 />
             </section>
+            <CodeBlockWrapper
+                title="Installation"
+                code={`npx shadcn@latest add card`}
+                language="bash"
+            />
 
-            <section className="space-y-4">
-                <h2 className="text-2xl font-bold">Components</h2>
-                <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                        <thead>
-                            <tr className="border-b border-border">
-                                <th className="py-3 px-4 text-left font-semibold">Component</th>
-                                <th className="py-3 px-4 text-left font-semibold">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">Card</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">The main container component</td>
-                            </tr>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">CardHeader</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">Contains the title and description</td>
-                            </tr>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">CardTitle</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">The card title</td>
-                            </tr>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">CardDescription</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">The card description</td>
-                            </tr>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">CardContent</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">The main content area</td>
-                            </tr>
-                            <tr>
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">CardFooter</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">Contains actions or additional info</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <section>
+                <DocsProps
+                    props={[
+                        {
+                            name: "Card",
+                            description: "The root container component",
+                            type: "div",
+                            required: false,
+                        },
+                        {
+                            name: "CardHeader",
+                            description: "Contains the title and description",
+                            type: "div",
+                            required: false,
+                        },
+                        {
+                            name: "CardTitle",
+                            description: "The card title",
+                            type: "div",
+                            required: false,
+                        },
+                        {
+                            name: "CardDescription",
+                            description: "The card description",
+                            type: "div",
+                            required: false,
+                        },
+                        {
+                            name: "CardContent",
+                            description: "The main content area",
+                            type: "div",
+                            required: false,
+                        },
+                        {
+                            name: "CardFooter",
+                            description: "Contains actions or additional info",
+                            type: "div",
+                            required: false,
+                        },
+                    ]}
+                />
             </section>
         </div>
     );

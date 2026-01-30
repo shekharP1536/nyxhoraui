@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Copy, Check, Code2, Dock, Home, Settings, User, FileText } from "lucide-react";
 import { DocsHeader } from "@/components/ui/docs-documentation";
+import { FloatingDock } from "@/components/ui/floating-dock";
 
 export default function FloatingDockDocsPage() {
   return (
@@ -219,3 +220,9 @@ function CodeBlock({ code, language, title }: { code: string; language: string; 
     </div>
   );
 }
+<FloatingDock items={[
+  { title: "Home", icon: <Home />, href: "/" },
+  { title: "Profile", icon: <User />, href: "/profile" },
+  { title: "Documents", icon: <FileText />, href: "/docs" },
+  { title: "Settings", icon: <Settings />, href: "/settings" },
+]} />

@@ -22,21 +22,6 @@ interface UrlTabsProps extends React.ComponentProps<typeof Tabs> {
   replaceHistory?: boolean
 }
 
-/**
- * Enhanced Tabs component that syncs with URL parameters
- * 
- * Usage:
- * <UrlTabs defaultValue="overview" paramName="section">
- *   <TabsList>
- *     <TabsTrigger value="overview">Overview</TabsTrigger>
- *     <TabsTrigger value="members">Members</TabsTrigger>
- *   </TabsList>
- *   <TabsContent value="overview">Overview content</TabsContent>
- *   <TabsContent value="members">Members content</TabsContent>
- * </UrlTabs>
- * 
- * This will sync with URL like: /page?section=members
- */
 function UrlTabs({
   paramName = "tab",
   updateUrl = true,

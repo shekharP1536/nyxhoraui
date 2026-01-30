@@ -341,7 +341,7 @@ export function ComponentPreview({
 export function CodeBlockWrapper({ title, code, language }: { title?: string, code: string, language: string }) {
     return (
         <section className="space-y-4">
-            {title && <h3 className="text-2xl font-bold">{title}</h3>}
+            {title && <h2 className="text-2xl font-bold">{title}</h2>}
             <CodeBlock
                 code={code}
                 language={language}
@@ -618,7 +618,7 @@ function FileCodeBlock({ code, language, filename, filepath, showLineNumbers = t
 // Type definition for prop items
 interface PropItem {
     name: string;
-    type: string;
+    type?: string;
     defaultValue?: string;  // Optional - when undefined, shows "—"
     description: string;
     required?: boolean;     // Optional - adds a required indicator
@@ -633,8 +633,12 @@ export function DocsProps({ props }: { props: PropItem[] }) {
                     <thead>
                         <tr className="border-b border-border">
                             <th className="py-3 px-4 text-left font-semibold">Prop</th>
-                            <th className="py-3 px-4 text-left font-semibold">Type</th>
-                            <th className="py-3 px-4 text-left font-semibold">Default</th>
+                            {props?.some(prop => prop?.type) && (
+                                <th className="py-3 px-4 text-left font-semibold">Type</th>
+                            )}
+                            {props?.some(prop => prop?.defaultValue) && (
+                                <th className="py-3 px-4 text-left font-semibold">Default</th>
+                            )}
                             <th className="py-3 px-4 text-left font-semibold">Description</th>
                         </tr>
                     </thead>
@@ -652,16 +656,18 @@ export function DocsProps({ props }: { props: PropItem[] }) {
                                         <span className="ml-1 text-red-500 text-xs">*</span>
                                     )}
                                 </td>
-                                <td className="py-3 px-4 text-muted-foreground">
-                                    <code className="text-xs">{prop.type}</code>
-                                </td>
-                                <td className="py-3 px-4 text-muted-foreground">
-                                    {prop.defaultValue !== undefined ? (
+                                {
+                                    prop?.type && (
+                                        <td className="py-3 px-4 text-muted-foreground">
+                                            <code className="text-xs">{prop.type}</code>
+                                        </td>
+                                    )
+                                }
+                                {prop?.defaultValue && (
+                                    <td className="py-3 px-4 text-muted-foreground">
                                         <code className="text-xs">{prop.defaultValue}</code>
-                                    ) : (
-                                        <span className="text-muted-foreground/50">—</span>
-                                    )}
-                                </td>
+                                    </td>
+                                )}
                                 <td className="py-3 px-4 text-muted-foreground">
                                     {prop.description}
                                 </td>

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Terminal, AlertCircle, CheckCircle2, Info, AlertTriangle } from "lucide-react";
 import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+import { ComponentSource } from "@/components/ui/component-source";
 
 export const metadata: Metadata = {
     title: "Alert",
@@ -131,6 +132,12 @@ export default function MyComponent() {
 </Alert>`}
                 />
             </section>
+            <CodeBlockWrapper
+                title="Dependency"
+                code={`npm install @radix-ui/react-alert`}
+                language="tsx"
+            />
+            <ComponentSource filePath="/components/ui/alert.tsx" />
 
             <DocsProps
                 props={[

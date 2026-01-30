@@ -81,6 +81,11 @@ export default function MyComponent() {
 <Badge className="bg-purple-500/10 text-purple-500 border-purple-500/20">New</Badge>`}
                 />
             </section>
+            <CodeBlockWrapper
+                title="Installation"
+                code={`npx shadcn@latest add badge`}
+                language="bash"
+            />
 
             <DocsProps
                 props={[

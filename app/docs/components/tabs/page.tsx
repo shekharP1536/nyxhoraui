@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 
 export const metadata: Metadata = {
     title: "Tabs",
@@ -161,38 +161,13 @@ export default function MyComponent() {
 </Tabs>`}
                 />
             </section>
+            <DocsProps props={[
+                {name:"Tabs",description:"The root component that manges tab state and layout.",required:true},
+                {name:"TabsList",description:"Container for tab triggers.",required:true},
+                {name:"TabsTrigger",description:"Individual tab trigger.",required:true},
+                {name:"TabsContent",description:"Content panel for a tab.",required:true}
+            ]}/>
 
-            <section className="space-y-4">
-                <h2 className="text-2xl font-bold">Components</h2>
-                <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                        <thead>
-                            <tr className="border-b border-border">
-                                <th className="py-3 px-4 text-left font-semibold">Component</th>
-                                <th className="py-3 px-4 text-left font-semibold">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">Tabs</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">The root component that manages tab state</td>
-                            </tr>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">TabsList</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">Contains the tab triggers</td>
-                            </tr>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">TabsTrigger</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">The button that activates a tab</td>
-                            </tr>
-                            <tr>
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">TabsContent</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">Contains the content for each tab</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
         </div>
     );
 }

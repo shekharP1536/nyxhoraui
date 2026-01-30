@@ -63,7 +63,7 @@ export const Navbar = () => {
                 <Logo />
               </div>
               <span className="text-xl font-bold bg-clip-text text-transparent bg-linear-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-600">
-                Nyxhora
+                Nyxhora UI
               </span>
             </Link>
           </div>

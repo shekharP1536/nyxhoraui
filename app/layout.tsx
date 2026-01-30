@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/ui/navbar";
 import NextTopLoader from "nextjs-toploader";
+import { Toaster } from "@/components/ui/sonner";
+import { ExitIntentProvider } from "@/components/providers/exit-intent-provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
     default: "NyxhoraUI - Modern UI Components for Next.js",
     template: "%s | NyxhoraUI",
   },
-  metadataBase: new URL("https://nyxhoraui.com"),
+  metadataBase: new URL("https://ui.nyxhora.com"),
   description: "A collection of beautifully designed, accessible, and customizable React UI components built with Tailwind CSS and Framer Motion. Build premium web experiences with ease.",
   keywords: ["Next.js", "React", "Tailwind CSS", "UI Components", "Library", "Design System", "Framer Motion", "Accessible"],
   authors: [{ name: "Nyxhora Team" }],
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nyxhoraui.com",
+    url: "https://ui.nyxhora.com",
     title: "NyxhoraUI - Build Premium Web Experiences",
     description: "Copy-paste UI components for Next.js. Beautiful, reusable, and built with Tailwind CSS.",
     siteName: "NyxhoraUI",
@@ -47,6 +49,20 @@ export const metadata: Metadata = {
     creator: "@nyxhora",
     images: ["/og-image.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/Icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/Icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+      { url: "/apple-touch-icon-120x120.png", sizes: "120x120" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
   robots: {
     index: true,
     follow: true,
@@ -58,6 +74,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -88,7 +105,7 @@ export default function RootLayout({
               "author": {
                 "@type": "Organization",
                 "name": "Nyxhora Team",
-                "url": "https://nyxhoraui.com"
+                "url": "https://ui.nyxhora.com"
               }
             }),
           }}
@@ -111,10 +128,13 @@ export default function RootLayout({
             shadow="0 0 10px #2563eb,0 0 5px #2563eb"
             zIndex={99999}
           />
+          <Toaster />
           <Navbar />
-          <main className="flex-1 pt-16 min-h-screen">
-            {children}
-          </main>
+          <ExitIntentProvider>
+            <main className="flex-1 pt-16 min-h-screen">
+              {children}
+            </main>
+          </ExitIntentProvider>
         </ThemeProvider>
       </body>
     </html>

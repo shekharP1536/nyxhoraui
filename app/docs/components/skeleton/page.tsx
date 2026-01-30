@@ -150,6 +150,11 @@ export default function MyComponent() {
 </div>`}
                 />
             </section>
+            <CodeBlockWrapper 
+            title="Installation"
+            code={`npx shadcn@latest add skeleton`}
+            language="bash"
+            />
 
             <DocsProps
                 props={[

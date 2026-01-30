@@ -25,8 +25,6 @@ export interface ComponentShowcardProps {
     actionLabel?: string;
     /** Open in new tab */
     external?: boolean;
-    /** Icon to show next to title */
-    icon?: LucideIcon;
     /** Badge text (e.g., "New", "Beta") */
     badge?: string;
     /** Badge variant */
@@ -94,7 +92,6 @@ export function ComponentShowcard({
     showAction = true,
     actionLabel = "View",
     external = false,
-    icon: Icon,
     badge,
     badgeVariant = "default",
     copyCode,
@@ -171,7 +168,6 @@ export function ComponentShowcard({
                 <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">
-                            {Icon && <Icon className="h-4 w-4 text-muted-foreground" />}
                             <h3 className={cn(sizeConfig.title, "group-hover:text-primary transition-colors truncate")}>
                                 {title}
                             </h3>

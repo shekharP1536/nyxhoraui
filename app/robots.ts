@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: "/",
             disallow: ["/api/"],
         },
-        sitemap: "https://nyxhoraui.com/sitemap.xml",
+        sitemap: "https://ui.nyxhora.com/sitemap.xml",
     };
 }

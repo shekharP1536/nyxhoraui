@@ -451,6 +451,7 @@ export const docsConfig: DocsNavCategory[] = [
                 title: "Exit Intent Demo",
                 href: "/docs/components/exit-intent-demo",
                 description: "Exit intent detection demo",
+                special: true,
             },
         ],
     },

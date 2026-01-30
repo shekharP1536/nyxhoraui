@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+import { ComponentSource } from "@/components/ui/component-source";
 
 export const metadata: Metadata = {
     title: "Dialog",
@@ -183,6 +184,7 @@ export default function MyComponent() {
                 />
             </section>
 
+<ComponentSource filePath="/components/ui/dialog.tsx" />
             <section className="space-y-4">
                 <h2 className="text-2xl font-bold">Components</h2>
                 <div className="overflow-x-auto">

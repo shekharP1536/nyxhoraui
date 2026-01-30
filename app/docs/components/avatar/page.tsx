@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 
 export const metadata: Metadata = {
     title: "Avatar",
@@ -180,34 +180,33 @@ export default function MyComponent() {
 </div>`}
                 />
             </section>
+            <CodeBlockWrapper
+                title="Installation"
+                code={`npx shadcn@latest add avatar`}
+                language="bash"
+            />
 
-            <section className="space-y-4">
-                <h2 className="text-2xl font-bold">Components</h2>
-                <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                        <thead>
-                            <tr className="border-b border-border">
-                                <th className="py-3 px-4 text-left font-semibold">Component</th>
-                                <th className="py-3 px-4 text-left font-semibold">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">Avatar</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">The root container</td>
-                            </tr>
-                            <tr className="border-b border-border/50">
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">AvatarImage</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">The image element</td>
-                            </tr>
-                            <tr>
-                                <td className="py-3 px-4"><code className="text-xs bg-muted px-1.5 py-0.5 rounded">AvatarFallback</code></td>
-                                <td className="py-3 px-4 text-muted-foreground">Fallback when image fails to load</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+            <DocsProps props={[
+                {
+                    name: "Avatar",
+                    description: "The root container",
+                    type: "div",
+                    required: false,
+                },
+                {
+                    name: "AvatarImage",
+                    description: "The image element",
+                    type: "img",
+                    required: false,
+                },
+                {
+                    name: "AvatarFallback",
+                    description: "Fallback when image fails to load",
+                    type: "div",
+
+                    required: false,
+                },
+            ]} />
         </div>
     );
 }

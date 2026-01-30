@@ -2,7 +2,8 @@ import { Metadata } from "next";
 import { ComponentShowcard, ShowcardGrid } from "@/components/ui/component-showcard";
 import { Button } from "@/components/ui/button";
 import { CodeBlockWrapper, DocsHeader, DocsProps, ComponentPreview } from "@/components/ui/docs-documentation";
-import { Sparkles, Terminal, Copy } from "lucide-react";
+import { Sparkles, Terminal, Copy, Building } from "lucide-react";
+import { ComponentSource } from "@/components/ui/component-source";
 
 export const metadata: Metadata = {
     title: "Component Showcard",
@@ -29,7 +30,6 @@ export default function ComponentShowcardDocsPage() {
                         gradient="from-blue-500/10 to-purple-500/10"
                         badge="New"
                         badgeVariant="success"
-                        copyCode="npm install my-component"
                     >
                         <Button>Interactive Button</Button>
                     </ComponentShowcard>
@@ -47,18 +47,6 @@ export default function ComponentShowcardDocsPage() {
                 Note: This is a custom component. You need to copy the source code manually if not using the CLI.
             </div>
 
-            {/* Source Code */}
-            <CodeBlockWrapper
-                title="components/ui/component-showcard.tsx"
-                code={`import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { ArrowRight, ExternalLink, Copy, Check, LucideIcon } from "lucide-react";
-import { useState } from "react";
-import { motion } from "framer-motion";
-
-// ... (copy full component source here)`}
-                language="tsx"
-            />
 
             {/* Variants */}
             <section className="space-y-8">
@@ -134,6 +122,7 @@ import { motion } from "framer-motion";
                     </ComponentShowcard>
                 </div>
             </section>
+            <ComponentSource filePath="/components/ui/component-showcard.tsx" />
 
             {/* Props */}
             <DocsProps

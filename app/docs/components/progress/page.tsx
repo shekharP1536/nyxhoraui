@@ -136,6 +136,11 @@ export default function MyComponent() {
 <Progress value={60} className="h-4" /> // Large`}
                 />
             </section>
+            <CodeBlockWrapper 
+            title="Installation"
+            code={`npx shadcn@latest add progress`}
+            language="bash"
+            />
 
             <DocsProps
                 props={[

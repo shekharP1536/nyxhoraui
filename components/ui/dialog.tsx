@@ -46,8 +46,8 @@ const DialogContent = React.forwardRef<
     >
       {children}
       <DialogPrimitive.Close className="absolute right-4 top-4 flex items-center gap-2 rounded-full p-2 opacity-60 ring-offset-background transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-accent-foreground hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground cursor-pointer group">
-        <Kbd className="hidden sm:inline-flex h-5 items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <span className="text-xs">Esc</span>
+        <Kbd className="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          Esc
         </Kbd>
         <X className="h-5 w-5" strokeWidth={1.5} />
         <span className="sr-only">Close</span>

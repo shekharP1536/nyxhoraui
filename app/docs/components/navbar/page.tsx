@@ -1,11 +1,8 @@
-"use client";
 
-import { DocsHeader, DocsPreview, CodeBlockWrapper, DocsProps } from "@/components/ui/docs-documentation";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { Home, Sparkles, Info, Menu, X, ArrowRight, Layers, Smartphone, Palette, Zap } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { DocsHeader, DocsPreview, CodeBlockWrapper } from "@/components/ui/docs-documentation";
+import { Layers, Smartphone, Palette, Zap } from "lucide-react";
+import { ComponentSource } from "@/components/ui/component-source";
+import { NavbarDemo } from "./navbarDemo";
 
 function FeatureCard({ icon: Icon, title, description }: { icon: any; title: string; description: string }) {
   return (
@@ -22,52 +19,7 @@ function FeatureCard({ icon: Icon, title, description }: { icon: any; title: str
   );
 }
 
-function NavbarDemo() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const routes = [
-    { label: "Home", icon: Home, href: "#", active: true },
-    { label: "Features", icon: Sparkles, href: "#", active: false },
-    { label: "About", icon: Info, href: "#", active: false },
-  ];
 
-  return (
-    <div className="w-full max-w-4xl">
-      <nav className="relative w-full backdrop-blur-lg rounded-xl border border-border/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <Link href="#" className="flex items-center group">
-                <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">NyxUI</span>
-              </Link>
-            </div>
-            <div className="hidden md:block">
-              <div className="flex items-center space-x-1">
-                {routes.map((route) => (
-                  <Link key={route.label} href={route.href}
-                    className={cn("relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
-                      route.active ? "shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground")}>
-                    <div className="flex items-center gap-2">{route.label}</div>
-                    {route.active && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="hidden md:flex items-center gap-3">
-              <Button variant="default" size="sm" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white gap-2">
-                Get Started <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
-            <div className="md:hidden flex items-center">
-              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2 rounded-lg text-muted-foreground hover:text-foreground">
-                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  );
-}
 
 export default function NavbarDocsPage() {
   return (
@@ -109,58 +61,7 @@ export default function Layout({ children }) {
   );
 }`} language="tsx" />
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-bold">Component Source</h2>
-        <p className="text-muted-foreground">Copy to <code className="px-1.5 py-0.5 rounded bg-muted text-sm">components/ui/navbar.tsx</code></p>
-        <CodeBlockWrapper code={`"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Menu, X, Home, ArrowRight, Sparkles, Info, Store } from "lucide-react";
-import { useState } from "react";
-
-export const Navbar = () => {
-  const pathname = usePathname();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const routes = [
-    { label: "Home", icon: Home, href: "/", active: pathname === "/" },
-    { label: "Features", icon: Sparkles, href: "/features", active: pathname === "/features" },
-    { label: "UI", icon: Sparkles, href: "/docs", active: pathname === "/docs" },
-    { label: "Template", icon: Store, href: "/market", active: pathname === "/market" },
-    { label: "About", icon: Info, href: "/about", active: pathname === "/about" },
-  ];
-
-  return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center">
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Nyxhora</span>
-          </Link>
-          <div className="hidden md:flex items-center space-x-1">
-            {routes.map((route) => (
-              <Link key={route.href} href={route.href}
-                className={cn("relative px-4 py-2 rounded-lg text-sm font-medium transition-all",
-                  route.active ? "text-foreground" : "text-muted-foreground hover:text-foreground")}>
-                {route.label}
-                {route.active && <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />}
-              </Link>
-            ))}
-          </div>
-          <Button asChild className="hidden md:flex bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-            <Link href="/app">Enter Nyxhora <ArrowRight className="h-4 w-4 ml-2" /></Link>
-          </Button>
-          <button className="md:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
-};`} language="tsx" />
-      </section>
+      <ComponentSource filePath="/components/ui/navbar.tsx" />
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold">Notes</h2>

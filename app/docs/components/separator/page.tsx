@@ -54,6 +54,11 @@ export default function MyComponent() {
                     previewCode={<div className="flex h-5 items-center space-x-4 text-sm"><div>Item 1</div><Separator orientation="vertical" /><div>Item 2</div><Separator orientation="vertical" /><div>Item 3</div></div>}
                     code={`<Separator orientation="vertical" />`}
                 />
+                <CodeBlockWrapper
+                    title="Installation"
+                    code={`npx shadcn@latest add separator`}
+                    language="bash"
+                />
             </section>
         </div>
     );

@@ -47,6 +47,11 @@ export default function MyComponent() {
                     }
                     code={`<Label htmlFor="name">Name <span className="text-red-500">*</span></Label>\n<Input id="name" required />`}
                 />
+                <CodeBlockWrapper
+                    title="Dependency"
+                    code={`npm install @radix-ui/react-label`}
+                    language="tsx"
+                />
             </section>
         </div>
     );
