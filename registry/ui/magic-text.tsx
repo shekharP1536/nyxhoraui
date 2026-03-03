@@ -36,7 +36,7 @@ export function MagicText({
             style={{
                 backgroundImage,
             }}
-            {...props as any}
+            {...props as ChildNode}
         >
             {children}
         </motion.span>

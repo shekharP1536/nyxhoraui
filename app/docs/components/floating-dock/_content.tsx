@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Copy, Check, Code2, Dock, Home, Settings, User, FileText } from "lucide-react";
-import { DocsHeader } from "@/components/ui/docs-documentation";
+import { Home, Settings, User, FileText } from "lucide-react";
+import { CodeBlock, DocsHeader } from "@/components/ui/docs-documentation";
 import { FloatingDock } from "@/registry/ui/floating-dock";
 
 export default function FloatingDockDocsPage() {
@@ -37,7 +36,7 @@ export default function FloatingDockDocsPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold">Installation</h2>
         <p className="text-muted-foreground">Copy and paste the following code into your project.</p>
-        <CodeBlock title="components/ui/floating-dock.tsx" code={componentCode} language="tsx" />
+        <CodeBlock code={componentCode} language="tsx" />
       </section>
 
       <section className="space-y-4">
@@ -207,19 +206,7 @@ function IconContainer({ mouseX, title, icon, href }: {
   );
 }`;
 
-function CodeBlock({ code, language, title }: { code: string; language: string; title?: string }) {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = () => { navigator.clipboard.writeText(code); setCopied(true); setTimeout(() => setCopied(false), 2000); };
-  return (
-    <div className="relative group rounded-xl overflow-hidden">
-      <div className="absolute right-3 top-3 opacity-0 group-hover:opacity-100 transition-opacity z-10">
-        <button onClick={handleCopy} className="flex items-center gap-1.5 px-2 py-1 text-xs text-zinc-400 hover:text-white bg-zinc-800 rounded-md">{copied ? <><Check className="h-3 w-3 text-green-500" /> Copied!</> : <><Copy className="h-3 w-3" /> Copy</>}</button>
-      </div>
-      <div className="flex items-center gap-2 px-4 py-2 bg-zinc-900 border-b border-zinc-800"><Code2 className="h-4 w-4 text-zinc-500" /><span className="text-xs text-zinc-500">{title || language}</span></div>
-      <pre className="bg-zinc-950 p-4 overflow-x-auto max-h-[500px]"><code className="text-sm text-zinc-100">{code}</code></pre>
-    </div>
-  );
-}
+
 <FloatingDock items={[
   { title: "Home", icon: <Home />, href: "/" },
   { title: "Profile", icon: <User />, href: "/profile" },

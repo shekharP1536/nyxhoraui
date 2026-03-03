@@ -124,7 +124,7 @@ export default function MyComponent() {
                     {
                         name: "variant",
                         type: "string",
-                        defaultValue: "default",
+                        defaultValue: "default | dotted | bars | pulse | gradient",
                         description: "The visual style of the spinner",
                     },
                     {

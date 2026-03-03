@@ -1,7 +1,7 @@
 
 import { generateComponentMetadata, generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
 import { MagicCard, MagicCardHeader, MagicCardTitle, MagicCardDescription, MagicCardContent, MagicCardFooter } from "@/registry/ui/magic-card";
-import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export default function MagicCardDocsPage() {
@@ -92,6 +92,17 @@ export default function Example() {
   );
 }`}
                 language="tsx"
+            />
+
+            <DocsProps
+              props={[
+                {
+                  name: "className",
+                  type: "string",
+                  defaultValue: "—",
+                  description: "Additional CSS classes",
+                },
+              ]}
             />
         </div>
         </>

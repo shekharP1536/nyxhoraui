@@ -31,7 +31,7 @@ const items3 = [
     { id: 12, src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=2340&auto=format&fit=crop", alt: "Beach 2" },
     { id: 13, src: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?q=80&w=2340&auto=format&fit=crop", alt: "Beach 3" },
     { id: 14, src: "https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?q=80&w=2344&auto=format&fit=crop", alt: "Beach 4" },
-    { id: 15, src: "https://images.unsplash.com/photo-1468413253771-d4f1f6631c0d?q=80&w=2340&auto=format&fit=crop", alt: "Beach 5" },
+    { id: 15, src: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda??q=80&w=2340&auto=format&fit=crop", alt: "Beach 5" },
 ];
 
 export default function ImageGridDocsPage() {

@@ -1,8 +1,8 @@
-import { generateComponentMetadata, generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
+import { generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
 import { ActionBar, ActionBarItem } from "@/registry/ui/action-bar";
-import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
+import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
-import { Activity, Camera, Settings, Share2 } from "lucide-react";
+import { Activity, Camera, Settings } from "lucide-react";
 
 export default function ActionBarDocsPage() {
     const faqSchema = generateComponentFAQSchema("Action Bar", getDefaultComponentFAQs("Action Bar"));

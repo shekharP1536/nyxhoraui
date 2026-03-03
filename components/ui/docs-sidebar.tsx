@@ -66,7 +66,7 @@ export function DocsSidebar({ className }: DocsSidebarProps) {
 
     const isActive = (href: string) => {
         if (href === "/docs" && pathname === "/docs") return true;
-        if (href !== "/docs" && pathname.startsWith(href)) return true;
+        if (href !== "/docs" && pathname === (href)) return true;
         return false;
     };
 
@@ -95,7 +95,7 @@ export function DocsSidebar({ className }: DocsSidebarProps) {
                                         Documentation
                                     </span>
                                     <p className="text-[10px] text-muted-foreground">
-                                        Nyxhora UIv1.0.0 (Beta)
+                                        Nyxhora UI v1.0.0
                                     </p>
                                 </div>
                             </Link>

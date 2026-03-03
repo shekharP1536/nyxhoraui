@@ -1,7 +1,7 @@
 
 import { generateComponentMetadata, generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
 import { MagicText } from "@/registry/ui/magic-text";
-import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
+import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
@@ -65,6 +65,16 @@ export default function Example() {
   );
 }`}
                 language="tsx"
+            />
+            <DocsProps
+                props={[
+                    {
+                        name: "gradientColor",
+                        type: "string",
+                        defaultValue: "—",
+                        description: "The gradient color to use for the magic effect",
+                    },
+                ]}
             />
         </div>
         </>

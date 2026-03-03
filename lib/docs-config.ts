@@ -252,6 +252,12 @@ export const docsConfig: DocsNavCategory[] = [
                 description: "URL-synced tabs",
             },
             {
+                title: "Floating Dock",
+                href: "/docs/components/floating-dock",
+                description: "Enhanced dock",
+                isNew: true,
+            },
+            {
                 title: "Floating Dock Dialog",
                 href: "/docs/components/floating-dock-dialog",
                 description: "Enhanced dock with bottom sheet dialog",

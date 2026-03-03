@@ -11,6 +11,116 @@
     "components": {},
     "items": [
         {
+            "name": "image-grid",
+            "title": "Image Grid",
+            "description": "An interactive gallery that lets users swap the hero image by clicking on thumbnails.",
+            "type": "registry:ui",
+            "dependencies": [
+                "framer-motion"
+            ],
+            "registryDependencies": [
+                "@/lib/utils"
+            ],
+            "files": [
+                {
+                    "path": "registry/ui/image-grid.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "corner-grid",
+            "title": "Corner Grid",
+            "description": "A responsive bento grid layout featuring clean, tech-inspired corner accents.",
+            "type": "registry:ui",
+            "dependencies": [],
+            "registryDependencies": [
+                "@/lib/utils"
+            ],
+            "files": [
+                {
+                    "path": "registry/ui/corner-grid.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "image-slider",
+            "title": "Image Slider",
+            "description": "A responsive, customizable image slider with support for swipes, autoplay, and thumbnails.",
+            "type": "registry:ui",
+            "dependencies": [
+                "lucide-react"
+            ],
+            "registryDependencies": [
+                "@/lib/utils"
+            ],
+            "files": [
+                {
+                    "path": "registry/ui/image-slider.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "workspace-label",
+            "title": "Workspace Label",
+            "description": "A workspace switcher with member avatars, pending request notifications, info card panel, and keyboard shortcuts.",
+            "type": "registry:ui",
+            "dependencies": [
+                "lucide-react"
+            ],
+            "registryDependencies": [
+                "@/lib/utils"
+            ],
+            "files": [
+                {
+                    "path": "registry/ui/workspace-label.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "floating-dock-dialog",
+            "title": "Floating Dock Dialog",
+            "description": "An enhanced floating dock with bottom sheet dialog, workspace cards, custom icons/colors, favorites, and spring physics animations.",
+            "type": "registry:ui",
+            "dependencies": [
+                "motion",
+                "@radix-ui/react-dialog",
+                "@tabler/icons-react",
+                "lucide-react"
+            ],
+            "registryDependencies": [
+                "@/lib/utils"
+            ],
+            "files": [
+                {
+                    "path": "registry/ui/floating-dock-dialog.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "floating-dock",
+            "title": "Floating Dock",
+            "description": "A macOS-style dock with smooth hover animations, spring physics, and responsive mobile/desktop variants.",
+            "type": "registry:ui",
+            "dependencies": [
+                "motion",
+                "@tabler/icons-react"
+            ],
+            "registryDependencies": [
+                "@/lib/utils"
+            ],
+            "files": [
+                {
+                    "path": "registry/ui/floating-dock.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
             "name": "button",
             "title": "Button",
             "description": "React Button component",
@@ -401,6 +511,22 @@
             "files": [
                 {
                     "path": "registry/ui/sheet.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
+            "name": "action-bar",
+            "title": "Action Bar",
+            "description": "A horizontal action bar component that displays a set of actionable items with icons and labels. Perfect for toolbars, navigation bars, and feature highlights. Nyxhora UI",
+            "type": "registry:ui",
+            "dependencies": [
+                "lucide-react",
+                "motion"
+            ],
+            "files": [
+                {
+                    "path": "registry/ui/action-bar.tsx",
                     "type": "registry:ui"
                 }
             ]

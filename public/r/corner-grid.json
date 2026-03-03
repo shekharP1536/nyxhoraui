@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "corner-grid",
+  "title": "Corner Grid",
+  "description": "A responsive bento grid layout featuring clean, tech-inspired corner accents.",
+  "dependencies": [],
+  "registryDependencies": [
+    "@/lib/utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/corner-grid.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\r\nimport React from \"react\";\r\n\r\nexport const CornerGrid = ({\r\n    className,\r\n    children,\r\n}: {\r\n    className?: string;\r\n    children?: React.ReactNode;\r\n}) => {\r\n    return (\r\n        <div\r\n            className={cn(\r\n                \"grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-7xl mx-auto\",\r\n                className\r\n            )}\r\n        >\r\n            {children}\r\n        </div>\r\n    );\r\n};\r\n\r\ninterface CornerCardProps {\r\n    className?: string;\r\n    children?: React.ReactNode;\r\n    title?: string;\r\n    description?: string;\r\n    header?: React.ReactNode;\r\n    icon?: React.ReactNode;\r\n    cornerColor?: string;\r\n}\r\n\r\nexport const CornerCard = ({\r\n    className,\r\n    children,\r\n    title,\r\n    description,\r\n    header,\r\n    icon,\r\n    cornerColor = \"currentColor\",\r\n}: CornerCardProps) => {\r\n    return (\r\n        <div\r\n            className={cn(\r\n                \"relative p-6 bg-background/50 border border-border/50 overflow-hidden dark:bg-zinc-900/50 group\",\r\n                \"flex flex-col justify-between space-y-4\",\r\n                className\r\n            )}\r\n        >\r\n            {/* Top Left Corner */}\r\n            <div\r\n                className=\"absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 transition-all duration-300 group-hover:w-8 group-hover:h-8 z-20\"\r\n                style={{ borderColor: cornerColor }}\r\n            />\r\n            {/* Top Right Corner */}\r\n            <div\r\n                className=\"absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 transition-all duration-300 group-hover:w-8 group-hover:h-8 z-20\"\r\n                style={{ borderColor: cornerColor }}\r\n            />\r\n            {/* Bottom Right Corner */}\r\n            <div\r\n                className=\"absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 transition-all duration-300 group-hover:w-8 group-hover:h-8 z-20\"\r\n                style={{ borderColor: cornerColor }}\r\n            />\r\n            {/* Bottom Left Corner */}\r\n            <div\r\n                className=\"absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 transition-all duration-300 group-hover:w-8 group-hover:h-8 z-20\"\r\n                style={{ borderColor: cornerColor }}\r\n            />\r\n\r\n            {header && <div className=\"w-full\">{header}</div>}\r\n\r\n            <div className=\"flex flex-col gap-2 relative z-10 transition-transform duration-300 group-hover:translate-x-1\">\r\n                {icon}\r\n                {title && (\r\n                    <h3 className=\"text-xl font-bold text-foreground\">\r\n                        {title}\r\n                    </h3>\r\n                )}\r\n                {description && (\r\n                    <p className=\"text-sm text-muted-foreground\">\r\n                        {description}\r\n                    </p>\r\n                )}\r\n                {children}\r\n            </div>\r\n        </div>\r\n    );\r\n};\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
