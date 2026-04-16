@@ -45,13 +45,13 @@ export default function HomeClient({ totalComponents, templatesCount, blocksCoun
                 >
                   <Link
                     href="/docs/components/image-grid"
-                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-800 transition-colors backdrop-blur-md group"
+                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-100/50 dark:bg-zinc-900/50 hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors backdrop-blur-md group"
                   >
-                    <span className="flex items-center justify-center w-5 h-5 rounded  group-hover:text-white transition-colors">
+                    <span className="flex items-center justify-center w-5 h-5 rounded  group-hover:text-black dark:group-hover:text-white transition-colors">
                       <Sparkle className="w-3 h-3" />
                     </span>
-                    <span className="text-xs font-medium dark:text-zinc-300">Image Grid</span>
-                    <ArrowRight className="w-3 h-3 text-zinc-500 group-hover:dark:text-zinc-300 transition-colors ml-1" />
+                    <span className="text-xs font-medium text-zinc-800 dark:text-zinc-300">Image Grid</span>
+                    <ArrowRight className="w-3 h-3 text-zinc-500 group-hover:text-zinc-900 group-hover:dark:text-zinc-300 transition-colors ml-1" />
                   </Link>
                 </motion.div>
 
@@ -73,7 +73,7 @@ export default function HomeClient({ totalComponents, templatesCount, blocksCoun
 
                 {/* Subtitle */}
                 <motion.p
-                  className="text-lg text-zinc-400 max-w-xl leading-relaxed"
+                  className="text-lg text-zinc-600 dark:text-zinc-400 max-w-xl leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -96,7 +96,7 @@ export default function HomeClient({ totalComponents, templatesCount, blocksCoun
                     />
                   </Link>
 
-                  <Button asChild variant="ghost" size="lg" className="rounded-full h-12 px-8 text-zinc-300 hover:text-white border border-zinc-800 hover:bg-zinc-800">
+                  <Button asChild variant="ghost" size="lg" className="rounded-full h-12 px-8 text-zinc-700 hover:text-black border border-zinc-200 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:text-white dark:border-zinc-800 dark:hover:bg-zinc-800">
                     <Link href="/docs">
                       Documentation
                     </Link>
@@ -124,10 +124,10 @@ export default function HomeClient({ totalComponents, templatesCount, blocksCoun
                         key={tech.name}
                         className="group flex items-center gap-2 cursor-pointer transition-all duration-300 ease-in-out"
                       >
-                        <div className="p-2 rounded-xl bg-zinc-900/50 group-hover:bg-zinc-800 transition-colors border border-transparent group-hover:border-zinc-700">
-                          <tech.icon className="w-6 h-6 text-zinc-500 group-hover:text-white transition-colors" />
+                        <div className="p-2 rounded-xl bg-zinc-100/50 dark:bg-zinc-900/50 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-800 transition-colors border border-transparent group-hover:border-zinc-300 dark:group-hover:border-zinc-700">
+                          <tech.icon className="w-6 h-6 text-zinc-500 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" />
                         </div>
-                        <span className="text-sm font-medium text-zinc-300 max-w-0 overflow-hidden opacity-0 group-hover:max-w-[100px] group-hover:opacity-100 transition-all duration-300 ease-in-out whitespace-nowrap">
+                        <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300 max-w-0 overflow-hidden opacity-0 group-hover:max-w-[100px] group-hover:opacity-100 transition-all duration-300 ease-in-out whitespace-nowrap">
                           {tech.name}
                         </span>
                       </div>
@@ -136,16 +136,16 @@ export default function HomeClient({ totalComponents, templatesCount, blocksCoun
                   <div>
                     <div className="container mx-auto px-4 md:px-6 py-8">
                       <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-16 text-sm font-medium">
-                        <Link href="/docs" className="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
-                          <span className="text-white font-bold">{totalComponents}+</span> components
+                        <Link href="/docs" className="group flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+                          <span className="text-black dark:text-white font-bold">{totalComponents}+</span> components
                           <ArrowRight className="w-3 h-3 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                         </Link>
-                        <Link href="/templates" className="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
-                          <span className="text-white font-bold">0{templatesCount}</span> templates
+                        <Link href="/templates" className="group flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+                          <span className="text-black dark:text-white font-bold">0{templatesCount}</span> templates
                           <ArrowRight className="w-3 h-3 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                         </Link>
-                        <Link href="/blocks" className="group flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
-                          <span className="text-white font-bold">0{blocksCount}</span> blocks
+                        <Link href="/blocks" className="group flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+                          <span className="text-black dark:text-white font-bold">0{blocksCount}</span> blocks
                           <ArrowRight className="w-3 h-3 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                         </Link>
                       </div>

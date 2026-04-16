@@ -14,12 +14,12 @@ export default function BackgroundBeamsDocsPage() {
             <DocsPreview
                 title="Preview"
                 previewCode={
-                    <div className="relative h-[300px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
+                    <div className="relative h-[500px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
                         <BackgroundBeams colorScheme="cyan" />
                         <h2 className="relative z-10 text-3xl font-bold text-white">Beautiful Beams</h2>
                     </div>
                 }
-                code={`<div className="relative h-[300px] w-full bg-neutral-950">
+                code={`<div className="relative h-[500px] w-full bg-neutral-950">
   <BackgroundBeams colorScheme="cyan" />
   <h2 className="relative z-10 text-white">Beautiful Beams</h2>
 </div>`}
@@ -61,7 +61,7 @@ export default function Hero() {
                 <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Purple</h3>
-                        <div className="relative h-[150px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
+                        <div className="relative h-[250px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
                             <BackgroundBeams colorScheme="purple" beamCount={30} />
                             <span className="relative z-10 text-white font-medium">Purple Theme</span>
                         </div>
@@ -69,7 +69,7 @@ export default function Hero() {
 
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Green</h3>
-                        <div className="relative h-[150px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
+                        <div className="relative h-[250px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
                             <BackgroundBeams colorScheme="green" beamCount={30} />
                             <span className="relative z-10 text-white font-medium">Green Theme</span>
                         </div>
@@ -77,7 +77,7 @@ export default function Hero() {
 
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Orange</h3>
-                        <div className="relative h-[150px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
+                        <div className="relative h-[250px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
                             <BackgroundBeams colorScheme="orange" beamCount={30} />
                             <span className="relative z-10 text-white font-medium">Orange Theme</span>
                         </div>
@@ -85,7 +85,7 @@ export default function Hero() {
 
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Pink</h3>
-                        <div className="relative h-[150px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
+                        <div className="relative h-[250px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
                             <BackgroundBeams colorScheme="pink" beamCount={30} />
                             <span className="relative z-10 text-white font-medium">Pink Theme</span>
                         </div>
@@ -101,7 +101,7 @@ export default function Hero() {
                     <h3 className="text-lg font-semibold">Fast Animation (2x speed)</h3>
                     <ComponentPreview
                         preview={
-                            <div className="relative h-[150px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
+                            <div className="relative h-[250px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
                                 <BackgroundBeams colorScheme="cyan" speed={2} beamCount={25} />
                                 <span className="relative z-10 text-white font-medium">2x Speed</span>
                             </div>
@@ -114,7 +114,7 @@ export default function Hero() {
                     <h3 className="text-lg font-semibold">Reverse Direction</h3>
                     <ComponentPreview
                         preview={
-                            <div className="relative h-[150px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
+                            <div className="relative h-[250px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
                                 <BackgroundBeams colorScheme="purple" reverse beamCount={25} />
                                 <span className="relative z-10 text-white font-medium">Reversed</span>
                             </div>
@@ -127,7 +127,7 @@ export default function Hero() {
                     <h3 className="text-lg font-semibold">Custom Colors</h3>
                     <ComponentPreview
                         preview={
-                            <div className="relative h-[150px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
+                            <div className="relative h-[250px] w-full rounded-lg bg-neutral-950 overflow-hidden flex items-center justify-center">
                                 <BackgroundBeams
                                     colorScheme="custom"
                                     customColors={{ start: "#FF0080", middle: "#7928CA", end: "#FF0080" }}

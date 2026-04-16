@@ -1,4 +1,4 @@
-import { generateComponentMetadata, generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
+import { generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
 import { DocsHeader, DocsProps, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 import { ComponentSource } from "@/registry/ui/component-source";
 import {
@@ -115,9 +115,6 @@ export default function MyComponent() {
                     <SheetSideBottom />
                 </div>
             </section>
-
-            {/* Component Source */}
-            <ComponentSource filePath="/components/ui/sheet.tsx" />
 
             {/* Props */}
             <DocsProps

@@ -80,29 +80,29 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   /* Light theme colors */
-  --hljs-bg: #1a1a1a;
-  --hljs-fg: #e4e4e7;
+  --hljs-bg: var(--background);
+  --hljs-fg: var(--foreground);
   --hljs-comment: #6b7280;
-  --hljs-keyword: #c084fc;
-  --hljs-string: #86efac;
-  --hljs-number: #fbbf24;
-  --hljs-function: #60a5fa;
-  --hljs-class: #22d3ee;
-  --hljs-variable: #f472b6;
-  --hljs-operator: #94a3b8;
-  --hljs-punctuation: #6b7280;
-  --hljs-tag: #f472b6;
-  --hljs-attr: #60a5fa;
-  --hljs-attr-value: #86efac;
-  --hljs-property: #e4e4e7;
-  --hljs-built-in: #22d3ee;
-  --hljs-meta: #94a3b8;
-  --hljs-title: #60a5fa;
-  --hljs-type: #22d3ee;
-  --hljs-selector: #c084fc;
-  --hljs-literal: #fbbf24;
-  --hljs-symbol: #f472b6;
-  --hljs-line-number: #4b5563;
+  --hljs-keyword: #7e22ce;
+  --hljs-string: #15803d;
+  --hljs-number: #b45309;
+  --hljs-function: #1d4ed8;
+  --hljs-class: #0f766e;
+  --hljs-variable: #be123c;
+  --hljs-operator: #334155;
+  --hljs-punctuation: #475569;
+  --hljs-tag: #be123c;
+  --hljs-attr: #7e22ce;
+  --hljs-attr-value: #15803d;
+  --hljs-property: #4338ca;
+  --hljs-built-in: #2563eb;
+  --hljs-meta: #475569;
+  --hljs-title: #1d4ed8;
+  --hljs-type: #0f766e;
+  --hljs-selector: #7e22ce;
+  --hljs-literal: #b45309;
+  --hljs-symbol: #be123c;
+  --hljs-line-number: #9ca3af;
 }
 
 
@@ -152,189 +152,189 @@
 
 /* Syntax Highlighting with CSS Variables for Theme Support */
 
-  /* Dark theme is default for code blocks */
-  .dark {
-    --hljs-bg: #0a0a0a;
-    --hljs-fg: #e4e4e7;
-    --hljs-comment: #6b7280;
-    --hljs-keyword: #c084fc;
-    --hljs-string: #86efac;
-    --hljs-number: #fbbf24;
-    --hljs-function: #60a5fa;
-    --hljs-class: #22d3ee;
-    --hljs-variable: #f472b6;
-    --hljs-operator: #94a3b8;
-    --hljs-punctuation: #6b7280;
-    --hljs-tag: #f472b6;
-    --hljs-attr: #60a5fa;
-    --hljs-attr-value: #86efac;
-    --hljs-property: #e4e4e7;
-    --hljs-built-in: #22d3ee;
-    --hljs-meta: #94a3b8;
-    --hljs-title: #60a5fa;
-    --hljs-type: #22d3ee;
-    --hljs-selector: #c084fc;
-    --hljs-literal: #fbbf24;
-    --hljs-symbol: #f472b6;
-    --hljs-line-number: #4b5563;
-  }
+/* Dark theme is default for code blocks */
+.dark {
+  --hljs-bg: #0a0a0a;
+  --hljs-fg: #e4e4e7;
+  --hljs-comment: #6b7280;
+  --hljs-keyword: #c084fc;
+  --hljs-string: #86efac;
+  --hljs-number: #fbbf24;
+  --hljs-function: #60a5fa;
+  --hljs-class: #22d3ee;
+  --hljs-variable: #f472b6;
+  --hljs-operator: #94a3b8;
+  --hljs-punctuation: #6b7280;
+  --hljs-tag: #f472b6;
+  --hljs-attr: #60a5fa;
+  --hljs-attr-value: #86efac;
+  --hljs-property: #e4e4e7;
+  --hljs-built-in: #22d3ee;
+  --hljs-meta: #94a3b8;
+  --hljs-title: #60a5fa;
+  --hljs-type: #22d3ee;
+  --hljs-selector: #c084fc;
+  --hljs-literal: #fbbf24;
+  --hljs-symbol: #f472b6;
+  --hljs-line-number: #4b5563;
+}
 
-  /* Base styles */
-  pre code.hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 1em;
-  }
+/* Base styles */
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
 
-  code.hljs {
-    padding: 3px 5px;
-  }
+code.hljs {
+  padding: 3px 5px;
+}
 
-  .hljs {
-    background: var(--hljs-bg);
-    color: var(--hljs-fg);
-  }
+.hljs {
+  background: var(--hljs-bg);
+  color: var(--hljs-fg);
+}
 
-  /* Comments */
-  .hljs-comment,
-  .hljs-quote {
-    color: var(--hljs-comment);
-    font-style: italic;
-  }
+/* Comments */
+.hljs-comment,
+.hljs-quote {
+  color: var(--hljs-comment);
+  font-style: italic;
+}
 
-  /* Keywords - import, export, const, function, return, etc. */
-  .hljs-keyword,
-  .hljs-selector-tag,
-  .hljs-meta .hljs-keyword {
-    color: var(--hljs-keyword);
-    font-weight: 500;
-  }
+/* Keywords - import, export, const, function, return, etc. */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-meta .hljs-keyword {
+  color: var(--hljs-keyword);
+  font-weight: 500;
+}
 
-  /* Strings */
-  .hljs-string,
-  .hljs-attr-value,
-  .hljs-template-tag,
-  .hljs-template-variable {
-    color: var(--hljs-string);
-  }
+/* Strings */
+.hljs-string,
+.hljs-attr-value,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: var(--hljs-string);
+}
 
-  /* Numbers */
-  .hljs-number,
-  .hljs-literal {
-    color: var(--hljs-number);
-  }
+/* Numbers */
+.hljs-number,
+.hljs-literal {
+  color: var(--hljs-number);
+}
 
-  /* Functions and methods */
-  .hljs-title,
-  .hljs-title.function_,
-  .hljs-title.class_ {
-    color: var(--hljs-function);
-  }
+/* Functions and methods */
+.hljs-title,
+.hljs-title.function_,
+.hljs-title.class_ {
+  color: var(--hljs-function);
+}
 
-  /* Classes and types */
-  .hljs-type,
-  .hljs-built_in,
-  .hljs-class {
-    color: var(--hljs-class);
-  }
+/* Classes and types */
+.hljs-type,
+.hljs-built_in,
+.hljs-class {
+  color: var(--hljs-class);
+}
 
-  /* Variables */
-  .hljs-variable,
-  .hljs-symbol {
-    color: var(--hljs-variable);
-  }
+/* Variables */
+.hljs-variable,
+.hljs-symbol {
+  color: var(--hljs-variable);
+}
 
-  /* Operators and punctuation */
-  .hljs-operator {
-    color: var(--hljs-operator);
-  }
+/* Operators and punctuation */
+.hljs-operator {
+  color: var(--hljs-operator);
+}
 
-  .hljs-punctuation {
-    color: var(--hljs-punctuation);
-  }
+.hljs-punctuation {
+  color: var(--hljs-punctuation);
+}
 
-  /* JSX/HTML Tags */
-  .hljs-tag {
-    color: var(--hljs-punctuation);
-  }
+/* JSX/HTML Tags */
+.hljs-tag {
+  color: var(--hljs-punctuation);
+}
 
-  .hljs-tag .hljs-name,
-  .hljs-name {
-    color: var(--hljs-tag);
-  }
+.hljs-tag .hljs-name,
+.hljs-name {
+  color: var(--hljs-tag);
+}
 
-  /* Attributes */
-  .hljs-tag .hljs-attr,
-  .hljs-attr {
-    color: var(--hljs-attr);
-  }
+/* Attributes */
+.hljs-tag .hljs-attr,
+.hljs-attr {
+  color: var(--hljs-attr);
+}
 
-  /* Property names */
-  .hljs-property {
-    color: var(--hljs-property);
-  }
+/* Property names */
+.hljs-property {
+  color: var(--hljs-property);
+}
 
-  /* Meta and decorators */
-  .hljs-meta,
-  .hljs-meta .hljs-string {
-    color: var(--hljs-meta);
-  }
+/* Meta and decorators */
+.hljs-meta,
+.hljs-meta .hljs-string {
+  color: var(--hljs-meta);
+}
 
-  /* Selectors (CSS) */
-  .hljs-selector-class,
-  .hljs-selector-id,
-  .hljs-selector-pseudo,
-  .hljs-selector-attr {
-    color: var(--hljs-selector);
-  }
+/* Selectors (CSS) */
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-selector-pseudo,
+.hljs-selector-attr {
+  color: var(--hljs-selector);
+}
 
-  /* Code and additions */
-  .hljs-addition {
-    background-color: rgba(134, 239, 172, 0.1);
-    color: var(--hljs-string);
-  }
+/* Code and additions */
+.hljs-addition {
+  background-color: rgba(134, 239, 172, 0.1);
+  color: var(--hljs-string);
+}
 
-  .hljs-deletion {
-    background-color: rgba(248, 113, 113, 0.1);
-    color: #f87171;
-  }
+.hljs-deletion {
+  background-color: rgba(248, 113, 113, 0.1);
+  color: #f87171;
+}
 
-  /* Emphasis */
-  .hljs-emphasis {
-    font-style: italic;
-  }
+/* Emphasis */
+.hljs-emphasis {
+  font-style: italic;
+}
 
-  .hljs-strong {
-    font-weight: 700;
-  }
+.hljs-strong {
+  font-weight: 700;
+}
 
-  /* Section titles */
-  .hljs-section {
-    color: var(--hljs-title);
-    font-weight: 700;
-  }
+/* Section titles */
+.hljs-section {
+  color: var(--hljs-title);
+  font-weight: 700;
+}
 
-  /* Regex and special */
-  .hljs-regexp,
-  .hljs-link {
-    color: var(--hljs-string);
-  }
+/* Regex and special */
+.hljs-regexp,
+.hljs-link {
+  color: var(--hljs-string);
+}
 
-  /* Bullet points */
-  .hljs-bullet {
-    color: var(--hljs-keyword);
-  }
+/* Bullet points */
+.hljs-bullet {
+  color: var(--hljs-keyword);
+}
 
-  /* Doctags */
-  .hljs-doctag {
-    color: var(--hljs-keyword);
-    font-weight: 500;
-  }
+/* Doctags */
+.hljs-doctag {
+  color: var(--hljs-keyword);
+  font-weight: 500;
+}
 
-  /* Attribute names in angle brackets like <InputOTP> */
-  .hljs-attribute {
-    color: var(--hljs-attr);
-  }
+/* Attribute names in angle brackets like <InputOTP> */
+.hljs-attribute {
+  color: var(--hljs-attr);
+}
 
 /* Spotlight Animation */
 @keyframes spotlight {
@@ -342,6 +342,7 @@
     opacity: 0;
     transform: translate(-72%, -62%) scale(0.5);
   }
+
   100% {
     opacity: 1;
     transform: translate(-50%, -40%) scale(1);
@@ -354,58 +355,64 @@
 
 /* Neon Button */
 .neon-button {
-    font-family: var(--font-orbitron), sans-serif;
-    font-size: 2rem;
-    display: inline-block;
-    padding: 0.5em 1.5em;
-    color: #00f3ff; /* Cyan Text */
-    border: 4px solid #00f3ff;
-    border-radius: 0.25em;
-    text-decoration: none;
-    text-shadow: 0 0 0.5em rgba(0, 243, 255, 0.5);
-    box-shadow: 
-        inset 0 0 0.5em rgba(0, 243, 255, 0.5),
-        0 0 0.5em rgba(0, 243, 255, 0.5);
-    position: relative;
-    transition: background-color 0.2s, color 0.2s;
-    background: transparent;
+  font-family: var(--font-orbitron), sans-serif;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  color: #00f3ff;
+  /* Cyan Text */
+  border: 4px solid #00f3ff;
+  border-radius: 0.25em;
+  text-decoration: none;
+  text-shadow: 0 0 0.5em rgba(0, 243, 255, 0.5);
+  box-shadow:
+    inset 0 0 0.5em rgba(0, 243, 255, 0.5),
+    0 0 0.5em rgba(0, 243, 255, 0.5);
+  position: relative;
+  transition: background-color 0.2s, color 0.2s;
+  background: transparent;
 }
 
 .neon-button::before {
-    content: '';
-    position: absolute;
-    top: 120%; left: 0;
-    width: 100%; height: 100%;
-    background: #00f3ff;
-    transform: perspective(1em) rotateX(100deg) scale(1, 0.35);
-    filter: blur(1.5em);
-    opacity: 0.5;
-    pointer-events: none;
-    transition: opacity 0.2s;
+  content: '';
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00f3ff;
+  transform: perspective(1em) rotateX(100deg) scale(1, 0.35);
+  filter: blur(1.5em);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.2s;
 }
 
 .neon-button::after {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-    box-shadow: 0 0 2em 0.5em #00f3ff;
-    opacity: 0;
-    background: #00f3ff;
-    z-index: -1;
-    transition: opacity 0.2s;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em #00f3ff;
+  opacity: 0;
+  background: #00f3ff;
+  z-index: -1;
+  transition: opacity 0.2s;
 }
 
 /* Hover Effects */
 .neon-button:hover {
-    background: #00f3ff;
-    color: #050505;
-    text-shadow: none;
+  background: #00f3ff;
+  color: #050505;
+  text-shadow: none;
 }
 
 .neon-button:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .neon-button:hover::after {
-    opacity: 1;
+  opacity: 1;
 }

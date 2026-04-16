@@ -35,7 +35,7 @@ export function ActionBar({ children, className }: ActionBarProps) {
                 className={cn(
                     "flex flex-col gap-3 justify-center min-h-[500px] w-full max-w-md mx-auto p-8 rounded-[32px]",
                     // Glassmorphism styles
-                    "bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl",
+                    "bg-white/40 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl",
                     className
                 )}
             >
@@ -70,9 +70,9 @@ export function ActionBarItem({
             className={cn(
                 "relative w-full overflow-hidden cursor-pointer",
                 // Base styles for item
-                "bg-[#1e1e20] rounded-[28px]",
+                "bg-white dark:bg-[#1e1e20] shadow-sm dark:shadow-none rounded-[28px]",
                 // Hover state
-                !isOpen && "hover:bg-[#272729]",
+                !isOpen && "hover:bg-gray-50 dark:hover:bg-[#272729]",
                 className
             )}
             transition={{
@@ -91,8 +91,8 @@ export function ActionBarItem({
                             exit={{ opacity: 0, y: -10 }}
                             className="flex items-center gap-3 px-6 py-4"
                         >
-                            {icon || <Plus className="w-6 h-6 text-white" />}
-                            <span className="text-white font-semibold text-lg tracking-wide">
+                            {icon || <Plus className="w-6 h-6 text-black dark:text-white" />}
+                            <span className="text-black dark:text-white font-semibold text-lg tracking-wide">
                                 {label}
                             </span>
                         </motion.div>
@@ -112,7 +112,7 @@ export function ActionBarItem({
                             }}
                             className="px-6 pb-6 pt-6"
                         >
-                            <div className="text-white/90 leading-relaxed">
+                            <div className="text-black/90 dark:text-white/90 leading-relaxed">
                                 {children}
                             </div>
                         </motion.div>

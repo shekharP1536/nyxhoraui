@@ -14,7 +14,7 @@ export default function BackgroundLinesDocsPage() {
             <DocsPreview
                 title="Preview"
                 previewCode={
-                    <div className="relative h-[300px] w-full rounded-lg bg-black overflow-hidden flex items-center justify-center">
+                    <div className="relative h-[500px] w-full rounded-lg bg-black overflow-hidden flex items-center justify-center">
                         <BackgroundLines className="absolute inset-0" colorScheme="vibrant">
                             <div className="relative z-10 flex flex-col items-center justify-center h-full">
                                 <h2 className="text-3xl font-bold text-white">Dynamic Lines</h2>
@@ -65,7 +65,7 @@ export default function Hero() {
                 <div className="grid gap-4 md:grid-cols-2">
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Neon</h3>
-                        <div className="relative h-[150px] w-full rounded-lg bg-black overflow-hidden">
+                        <div className="relative h-[250px] w-full rounded-lg bg-black overflow-hidden">
                             <BackgroundLines colorScheme="neon" lineCount={10}>
                                 <div className="relative z-10 flex items-center justify-center h-full">
                                     <span className="text-white font-medium">Neon Colors</span>
@@ -76,7 +76,7 @@ export default function Hero() {
 
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Pastel</h3>
-                        <div className="relative h-[150px] w-full rounded-lg bg-slate-900 overflow-hidden">
+                        <div className="relative h-[250px] w-full rounded-lg bg-slate-900 overflow-hidden">
                             <BackgroundLines colorScheme="pastel" lineCount={10}>
                                 <div className="relative z-10 flex items-center justify-center h-full">
                                     <span className="text-white font-medium">Pastel Colors</span>
@@ -87,7 +87,7 @@ export default function Hero() {
 
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Sunset</h3>
-                        <div className="relative h-[150px] w-full rounded-lg bg-slate-950 overflow-hidden">
+                        <div className="relative h-[250px] w-full rounded-lg bg-slate-950 overflow-hidden">
                             <BackgroundLines colorScheme="sunset" lineCount={10}>
                                 <div className="relative z-10 flex items-center justify-center h-full">
                                     <span className="text-white font-medium">Sunset Colors</span>
@@ -98,7 +98,7 @@ export default function Hero() {
 
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Ocean</h3>
-                        <div className="relative h-[150px] w-full rounded-lg bg-slate-950 overflow-hidden">
+                        <div className="relative h-[250px] w-full rounded-lg bg-slate-950 overflow-hidden">
                             <BackgroundLines colorScheme="ocean" lineCount={10}>
                                 <div className="relative z-10 flex items-center justify-center h-full">
                                     <span className="text-white font-medium">Ocean Colors</span>
@@ -117,7 +117,7 @@ export default function Hero() {
                     <h3 className="text-lg font-semibold">Static (Non-Animated)</h3>
                     <ComponentPreview
                         preview={
-                            <div className="relative h-[150px] w-full rounded-lg bg-black overflow-hidden">
+                            <div className="relative h-[250px] w-full rounded-lg bg-black overflow-hidden">
                                 <BackgroundLines colorScheme="monochrome" animated={false} lineCount={15}>
                                     <div className="relative z-10 flex items-center justify-center h-full">
                                         <span className="text-white font-medium">Static Lines</span>
@@ -133,7 +133,7 @@ export default function Hero() {
                     <h3 className="text-lg font-semibold">Thick Lines</h3>
                     <ComponentPreview
                         preview={
-                            <div className="relative h-[150px] w-full rounded-lg bg-black overflow-hidden">
+                            <div className="relative h-[250px] w-full rounded-lg bg-black overflow-hidden">
                                 <BackgroundLines colorScheme="neon" strokeWidth={4} lineCount={8}>
                                     <div className="relative z-10 flex items-center justify-center h-full">
                                         <span className="text-white font-medium">Thick Strokes</span>

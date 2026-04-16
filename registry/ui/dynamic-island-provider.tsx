@@ -248,7 +248,7 @@ export function DynamicIslandProvider({
                         <motion.div
                             ref={islandRef}
                             className={cn(
-                                "relative overflow-hidden bg-black dark:bg-zinc-900 shadow-2xl cursor-pointer",
+                                "relative overflow-hidden bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 shadow-2xl cursor-pointer",
                                 variantStyles[variant]
                             )}
                             onMouseEnter={() => {
@@ -363,7 +363,7 @@ function CompactContent({ notification, notifications, activeIndex, direction, i
             {/* Icon */}
             {notification.icon && (
                 <motion.div
-                    className="flex-shrink-0 text-white/90"
+                    className="flex-shrink-0 text-zinc-900/90 dark:text-white/90"
                     initial={{ scale: 0.8, opacity: 0.5 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.05 }}
@@ -374,11 +374,11 @@ function CompactContent({ notification, notifications, activeIndex, direction, i
 
             {/* Text */}
             <div className="flex flex-col min-w-0">
-                <span className="text-sm font-medium text-white truncate">
+                <span className="text-sm font-medium text-zinc-900 dark:text-white truncate">
                     {notification.title}
                 </span>
                 {notification.subtitle && (
-                    <span className="text-xs text-white/60 truncate">
+                    <span className="text-xs text-zinc-600 dark:text-white/60 truncate">
                         {notification.subtitle}
                     </span>
                 )}
@@ -394,7 +394,7 @@ function CompactContent({ notification, notifications, activeIndex, direction, i
                                 "h-1.5 w-1.5 rounded-full transition-all",
                                 i === activeIndex
                                     ? indicatorColors[variant]
-                                    : "bg-white/30"
+                                    : "bg-black/20 dark:bg-white/30"
                             )}
                             initial={{ scale: 0 }}
                             animate={{
@@ -404,7 +404,7 @@ function CompactContent({ notification, notifications, activeIndex, direction, i
                         />
                     ))}
                     {totalCount > 4 && (
-                        <span className="text-xs text-white/50 ml-0.5">
+                        <span className="text-xs text-zinc-500 dark:text-white/50 ml-0.5">
                             +{totalCount - 4}
                         </span>
                     )}
@@ -472,7 +472,7 @@ function ExpandedContent({
 
     return (
         <motion.div
-            className="relative min-w-[280px] max-w-[360px] p-4 text-white"
+            className="relative min-w-[280px] max-w-[360px] p-4 text-zinc-900 dark:text-white"
             variants={slideVariants}
             custom={direction}
             initial="enter"
@@ -487,7 +487,7 @@ function ExpandedContent({
             {/* Close/Dismiss Button */}
             {isDismissable ? (
                 <motion.button
-                    className="absolute top-2 right-2 p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors cursor-pointer z-10"
+                    className="absolute top-2 right-2 p-1.5 rounded-full bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-colors cursor-pointer z-10"
                     onClick={(e) => {
                         e.stopPropagation();
                         onDismiss();
@@ -499,11 +499,11 @@ function ExpandedContent({
                     whileTap={{ scale: 0.9 }}
                     title="Dismiss"
                 >
-                    <X className="h-3.5 w-3.5 text-white/70" />
+                    <X className="h-3.5 w-3.5 text-zinc-600 dark:text-white/70" />
                 </motion.button>
             ) : (
                 <motion.button
-                    className="absolute top-2 right-2 p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors cursor-pointer z-10"
+                    className="absolute top-2 right-2 p-1.5 rounded-full bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-colors cursor-pointer z-10"
                     onClick={(e) => {
                         e.stopPropagation();
                         onClose();
@@ -515,7 +515,7 @@ function ExpandedContent({
                     whileTap={{ scale: 0.9 }}
                     title="Collapse"
                 >
-                    <ChevronLeft className="h-3.5 w-3.5 text-white/70 rotate-90" />
+                    <ChevronLeft className="h-3.5 w-3.5 text-zinc-600 dark:text-white/70 rotate-90" />
                 </motion.button>
             )}
 
@@ -531,14 +531,14 @@ function ExpandedContent({
                     <div className="space-y-3 pr-6">
                         <div className="flex items-start gap-3">
                             {notification.icon && (
-                                <div className="flex-shrink-0 text-white/90">
+                                <div className="flex-shrink-0 text-zinc-900/90 dark:text-white/90">
                                     {notification.icon}
                                 </div>
                             )}
                             <div>
-                                <h4 className="font-semibold">{notification.title}</h4>
+                                <h4 className="font-semibold text-zinc-900 dark:text-white">{notification.title}</h4>
                                 {notification.subtitle && (
-                                    <p className="text-sm text-white/70 mt-0.5">
+                                    <p className="text-sm text-zinc-600 dark:text-white/70 mt-0.5">
                                         {notification.subtitle}
                                     </p>
                                 )}
@@ -551,7 +551,7 @@ function ExpandedContent({
             {/* Navigation Dots (when multiple notifications) */}
             {totalCount > 1 && (
                 <motion.div
-                    className="flex items-center justify-center gap-2 mt-4 pt-3 border-t border-white/10"
+                    className="flex items-center justify-center gap-2 mt-4 pt-3 border-t border-zinc-200 dark:border-white/10"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
@@ -563,7 +563,7 @@ function ExpandedContent({
                                 e.stopPropagation();
                                 onPrev();
                             }}
-                            className="p-1 rounded-full transition-colors cursor-pointer hover:bg-white/20 text-white/70"
+                            className="p-1 rounded-full transition-colors cursor-pointer hover:bg-black/5 dark:hover:bg-white/20 text-zinc-600 dark:text-white/70"
                         >
                             <ChevronLeft className="h-4 w-4" />
                         </button>
@@ -582,7 +582,7 @@ function ExpandedContent({
                                     "h-2 w-2 rounded-full transition-all cursor-pointer",
                                     i === activeIndex
                                         ? cn(indicatorColors[variant], "scale-125")
-                                        : "bg-white/30 hover:bg-white/50"
+                                        : "bg-black/20 hover:bg-black/40 dark:bg-white/30 dark:hover:bg-white/50"
                                 )}
                                 title={n.title}
                             />
@@ -596,7 +596,7 @@ function ExpandedContent({
                                 e.stopPropagation();
                                 onNext();
                             }}
-                            className="p-1 rounded-full transition-colors cursor-pointer hover:bg-white/20 text-white/70"
+                            className="p-1 rounded-full transition-colors cursor-pointer hover:bg-black/5 dark:hover:bg-white/20 text-zinc-600 dark:text-white/70"
                         >
                             <ChevronRight className="h-4 w-4" />
                         </button>
@@ -607,7 +607,7 @@ function ExpandedContent({
             {/* Non-dismissable indicator */}
             {!isDismissable && (
                 <motion.div
-                    className="text-[10px] text-white/40 text-center mt-2"
+                    className="text-[10px] text-zinc-500 dark:text-white/40 text-center mt-2"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
@@ -646,9 +646,9 @@ export function DynamicIslandAction({
             disabled={disabled}
             className={cn(
                 "px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer",
-                variant === "default" && "bg-white/10 hover:bg-white/20 text-white",
-                variant === "primary" && "bg-white text-black hover:bg-white/90",
-                variant === "secondary" && "bg-zinc-700 hover:bg-zinc-600 text-white",
+                variant === "default" && "bg-black/5 hover:bg-black/10 text-zinc-900 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white",
+                variant === "primary" && "bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90",
+                variant === "secondary" && "bg-zinc-200 hover:bg-zinc-300 text-zinc-900 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:text-white",
                 disabled && "opacity-50 cursor-not-allowed",
                 className
             )}

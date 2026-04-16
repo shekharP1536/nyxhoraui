@@ -115,12 +115,12 @@ export function CodeBlock({
                 </div>
             )}
 
-            <div className={cn("overflow-x-auto bg-zinc-950 p-4", browserLayout ? "bg-zinc-950" : "bg-card")}>
+            <div className={cn("overflow-x-auto p-4 transition-colors", browserLayout ? "bg-zinc-50 dark:bg-zinc-950" : "bg-background md:bg-card dark:bg-zinc-950")}>
                 <div className="flex min-w-full">
                     {showLineNumbers && (
-                        <div className="flex-shrink-0 pr-4 select-none text-right border-r border-zinc-800/50 mr-4">
+                        <div className="flex-shrink-0 pr-4 select-none text-right border-r border-border mr-4">
                             {lines.map((_, i) => (
-                                <div key={i} className="text-xs leading-6 text-zinc-600 font-mono">
+                                <div key={i} className="text-xs leading-6 text-muted-foreground font-mono">
                                     {i + 1}
                                 </div>
                             ))}

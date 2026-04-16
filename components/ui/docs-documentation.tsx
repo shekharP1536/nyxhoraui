@@ -364,7 +364,7 @@ export function ComponentPreview({
             <TooltipTrigger>
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-1.5 px-2.5 py-1 text-xs text-zinc-400 hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
+                className="flex items-center gap-1.5 px-2.5 py-1 text-xs  hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
                 title={copied ? "Copied!" : "Copy to clipboard"}
               >
                 {copied ? (
@@ -460,9 +460,9 @@ export function CodeBlock({
   };
 
   return (
-    <div className="relative rounded-xl overflow-hidden border border-zinc-800">
+    <div className="relative rounded-xl overflow-hidden border dark:border-zinc-800">
       {/* Header with language, line count, and copy button */}
-      <div className="flex items-center justify-between px-4 py-1.5 bg-zinc-900 border-b border-zinc-800">
+      <div className="flex items-center justify-between px-4 py-1.5 dark:bg-zinc-900 border-zinc-800">
         <div className="flex items-center gap-2">
           <Code2 className="h-4 w-4 text-zinc-500" />
           <span className="text-xs font-medium text-zinc-400">{language}</span>
@@ -473,7 +473,7 @@ export function CodeBlock({
             <TooltipTrigger>
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-1.5 px-2.5 py-1 text-xs text-zinc-400 hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
+                className="flex items-center gap-1.5 px-2.5 py-1 text-xs hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
                 title={copied ? "Copied!" : "Copy to clipboard"}
               >
                 {copied ? (
@@ -498,7 +498,7 @@ export function CodeBlock({
       <div className="relative">
         <div
           ref={containerRef}
-          className="bg-zinc-950 overflow-x-hidden transition-all duration-300"
+          className="dark:bg-zinc-950 overflow-x-hidden transition-all duration-300"
           style={{
             maxHeight: isExpanded ? "none" : `${maxHeight}px`,
             overflow: isExpanded ? "auto" : "hidden",
@@ -506,7 +506,7 @@ export function CodeBlock({
         >
           <div className="flex max-h-[900px]">
             {showLineNumbers && (
-              <div className="flex-shrink-0 py-4 pl-4 pr-3 select-none text-right border-r border-zinc-800/50">
+              <div className="flex-shrink-0 py-4 pl-4 pr-3 select-none text-right  border-zinc-800/50">
                 {lines.map((_, i) => (
                   <div
                     key={i}
@@ -533,7 +533,7 @@ export function CodeBlock({
         {/* Gradient overlay and expand button */}
         {needsExpand && !isExpanded && (
           <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
-            <div className="h-32 bg-gradient-to-t from-zinc-950 via-zinc-950/95 to-transparent" />
+            <div className="h-32 blur-in bg-gradient-to-t from-white-500 via-white-500/95 to-transparent dark:from-zinc-950 dark:via-zinc-950/95 dark:to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-4 pointer-events-auto">
               <button
                 onClick={() => setIsExpanded(true)}
@@ -549,7 +549,7 @@ export function CodeBlock({
         {/* Collapse button when expanded */}
         {needsExpand && isExpanded && (
           <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
-            <div className="h-12 bg-gradient-to-t from-zinc-950 via-zinc-950/95 to-transparent" />
+            <div className="h-32 bg-gradient-to-t from-white-500 via-white-500/95 to-transparent dark:from-zinc-950 dark:via-zinc-950/95 dark:to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-4 pointer-events-auto">
               <button
                 onClick={() => setIsExpanded(false)}
@@ -654,9 +654,9 @@ function FileCodeBlock({
     }
   }, [isDownloading]);
   return (
-    <div className="relative rounded-xl overflow-hidden border border-zinc-800">
+    <div className="relative rounded-xl overflow-hidden border dark:border-zinc-800">
       {/* Header with language, line count, and copy button */}
-      <div className="flex items-center justify-between px-4 py-1.5 bg-zinc-900 border-b border-zinc-800">
+        <div className="flex items-center justify-between px-4 py-1.5 dark:bg-zinc-900 border-zinc-800">
         <div className="flex items-center gap-2">
           <Code2 className="h-4 w-4 text-zinc-500" />
           <span className="text-xs font-medium text-zinc-400">
@@ -669,7 +669,7 @@ function FileCodeBlock({
             <TooltipTrigger>
               <button
                 onClick={() => handleDownload()}
-                className="flex items-center gap-1.5 px-2.5 py-1 text-xs text-zinc-400 hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
+                className="flex items-center gap-1.5 px-2.5 py-1 text-xs hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
                 title={showLineNumbers ? "Download" : "Download"}
               >
                 <Download className="h-3.5 w-3.5" />
@@ -683,7 +683,7 @@ function FileCodeBlock({
             <TooltipTrigger>
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-1.5 px-2.5 py-1 text-xs text-zinc-400 hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
+                className="flex items-center gap-1.5 px-2.5 py-1 text-xs hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
                 title={copied ? "Copied!" : "Copy to clipboard"}
               >
                 {copied ? (
@@ -708,7 +708,7 @@ function FileCodeBlock({
       <div className="relative">
         <div
           ref={containerRef}
-          className="bg-zinc-950 overflow-x-auto transition-all duration-300"
+          className="dark:bg-zinc-950 overflow-x-auto transition-all duration-300"
           style={{
             maxHeight: isExpanded ? "none" : `${maxHeight}px`,
             overflow: isExpanded ? "auto" : "hidden",
@@ -716,7 +716,7 @@ function FileCodeBlock({
         >
           <div className="flex max-h-[900px]">
             {showLineNumbers && (
-              <div className="flex-shrink-0 py-4 pl-4 pr-3 select-none text-right border-r border-zinc-800/50">
+              <div className="flex-shrink-0 py-4 pl-4 pr-3 select-none text-right border-zinc-800/50">
                 {lines.map((_, i) => (
                   <div
                     key={i}
@@ -732,7 +732,7 @@ function FileCodeBlock({
             >
               <code
                 ref={codeRef}
-                className={`hljs language-${language} text-sm leading-6 block`}
+                className={`hljs language-${language}  text-sm leading-6 block overflow-x-hidden`}
               >
                 {code}
               </code>
@@ -742,24 +742,24 @@ function FileCodeBlock({
 
         {/* Gradient overlay and expand button */}
         {needsExpand && !isExpanded && (
-          <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
-            <div className="h-32 bg-gradient-to-t from-zinc-950 via-zinc-950/95 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
+            <div className="h-32 blur-in bg-gradient-to-t from-white-500 via-white-500/95 to-transparent dark:from-zinc-950 dark:via-zinc-950/95 dark:to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-4 pointer-events-auto">
               <button
-                onClick={() => setIsExpanded(true)}
-                className="flex items-center cursor-pointer gap-2 px-4 py-2 text-xs font-medium text-zinc-300 bg-zinc-800 hover:bg-zinc-700 rounded-lg transition-all border border-zinc-700 hover:border-zinc-600 shadow-lg shadow-black/20"
+              onClick={() => setIsExpanded(true)}
+              className="flex items-center cursor-pointer gap-2 px-4 py-2 text-xs font-medium text-gray-700 dark:text-zinc-300 bg-gray-200 dark:bg-zinc-800 hover:bg-gray-300 dark:hover:bg-zinc-700 rounded-lg transition-all border border-gray-400 dark:border-zinc-700 hover:border-gray-500 dark:hover:border-zinc-600 shadow-lg shadow-black/20"
               >
-                <Eye className="h-3.5 w-3.5" />
-                View full code
+              <Eye className="h-3.5 w-3.5" />
+              View full code
               </button>
             </div>
-          </div>
+            </div>
         )}
 
         {/* Collapse button when expanded */}
         {needsExpand && isExpanded && (
           <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
-            <div className="h-12 bg-gradient-to-t from-zinc-950 via-zinc-950/95 to-transparent" />
+            <div className="h-12 dark:bg-gradient-to-t from-zinc-950 via-zinc-950/95 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-4 pointer-events-auto">
               <button
                 onClick={() => setIsExpanded(false)}

@@ -53,8 +53,8 @@ export function InstallationCommand({
   };
 
   return (
-    <div className="relative rounded-md pb-1 border border-zinc-800 bg-zinc-950">
-      <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-2">
+    <div className="relative rounded-md pb-1 border dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="flex items-center justify-between dark:border-b border-zinc-800 px-4 py-2">
         <Tabs
           value={packageManager}
           onValueChange={(value) => setPackageManager(value as "npm" | "pnpm" | "yarn" | "bun")}
@@ -93,7 +93,7 @@ export function InstallationCommand({
                 <TooltipTrigger>
                   <button
                     onClick={copyCommand}
-                    className="flex items-center gap-1.5 px-2.5 py-1 text-xs text-zinc-400 hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
+                    className="flex items-center gap-1.5 px-2.5 py-1 text-xs  hover:text-white cursor-pointer hover:bg-zinc-700 rounded-md transition-all border border-zinc-700/50"
                     title={copied ? "Copied!" : "Copy to clipboard"}
                   >
                     {copied ? (

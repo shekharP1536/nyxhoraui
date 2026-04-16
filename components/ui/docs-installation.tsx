@@ -1,5 +1,4 @@
-import { promises as fs } from "fs"
-import path from "path"
+import registryData from "@/registry.json"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/ui/tabs"
 import { ComponentSource } from "@/registry/ui/component-source"
 import { InstallationCommand } from "./installation-command"
@@ -10,23 +9,8 @@ interface RegistryItem {
   files?: Array<{ path: string; type: string }>
 }
 
-interface Registry {
-  items: RegistryItem[]
-}
-
-const DocsInstallation = async ({ name }: { name: string }) => {
-  // Read registry.json
-  const registryPath = path.join(process.cwd(), "registry.json")
-  let registry: Registry | null = null
-  try {
-    const fileContent = await fs.readFile(registryPath, "utf8")
-    registry = JSON.parse(fileContent)
-  } catch (error) {
-    console.error("Error reading registry.json", error)
-    return <div>Error loading installation instructions.</div>
-  }
-
-  const item = registry?.items.find((item) => item.name === name)
+const DocsInstallation = ({ name }: { name: string }) => {
+  const item = (registryData as { items: RegistryItem[] }).items.find((item) => item.name === name)
 
   if (!item) {
     return <div>Component not found in registry.</div>
@@ -68,7 +52,7 @@ const DocsInstallation = async ({ name }: { name: string }) => {
                 {externalDependencies.length > 0 && (
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-zinc-800 text-xs font-medium text-zinc-100 ring-1 ring-inset ring-zinc-700">1</span>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full dark:bg-zinc-800 text-xs font-medium text-zinc-100 ring-1 ring-inset ring-zinc-700">1</span>
                       <h3 className="font-medium">Install the following dependencies:</h3>
                     </div>
                     <InstallationCommand dependencies={externalDependencies} />

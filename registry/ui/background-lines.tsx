@@ -11,7 +11,14 @@ export interface BackgroundLinesProps {
     duration?: number;
   };
   /** Color theme preset */
-  colorScheme?: "vibrant" | "neon" | "pastel" | "monochrome" | "sunset" | "ocean" | "custom";
+  colorScheme?:
+    | "vibrant"
+    | "neon"
+    | "pastel"
+    | "monochrome"
+    | "sunset"
+    | "ocean"
+    | "custom";
   /** Custom colors array (used when colorScheme is "custom") */
   customColors?: string[];
   /** Stroke width of lines */
@@ -174,13 +181,13 @@ const SVG = ({
           transition={
             animated
               ? {
-                duration: svgOptions?.duration || 10,
-                ease: "linear",
-                repeat: Infinity,
-                repeatType: "loop",
-                delay: Math.floor(Math.random() * 10),
-                repeatDelay: Math.floor(Math.random() * 10 + 2),
-              }
+                  duration: svgOptions?.duration || 10,
+                  ease: "linear",
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  delay: (idx * 3) % 10,
+                  repeatDelay: ((idx * 7) % 10) + 2,
+                }
               : undefined
           }
           key={`path-first-${idx}`}
@@ -204,8 +211,8 @@ const SVG = ({
               ease: "linear",
               repeat: Infinity,
               repeatType: "loop",
-              delay: Math.floor(Math.random() * 10),
-              repeatDelay: Math.floor(Math.random() * 10 + 2),
+              delay: ((idx * 5 + 2) % 10),
+              repeatDelay: ((idx * 11) % 10) + 2,
             }}
             key={`path-second-${idx}`}
           />

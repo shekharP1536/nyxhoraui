@@ -2,29 +2,29 @@
 
 :root {
     /* Light theme colors */
-    --hljs-bg: #1a1a1a;
-    --hljs-fg: #e4e4e7;
-    --hljs-comment: #6b7280;
-    --hljs-keyword: #c084fc;
-    --hljs-string: #86efac;
-    --hljs-number: #fbbf24;
-    --hljs-function: #60a5fa;
-    --hljs-class: #22d3ee;
-    --hljs-variable: #f472b6;
-    --hljs-operator: #94a3b8;
-    --hljs-punctuation: #6b7280;
-    --hljs-tag: #f472b6;
-    --hljs-attr: #60a5fa;
-    --hljs-attr-value: #86efac;
-    --hljs-property: #e4e4e7;
-    --hljs-built-in: #22d3ee;
-    --hljs-meta: #94a3b8;
-    --hljs-title: #60a5fa;
-    --hljs-type: #22d3ee;
-    --hljs-selector: #c084fc;
-    --hljs-literal: #fbbf24;
-    --hljs-symbol: #f472b6;
-    --hljs-line-number: #4b5563;
+    --hljs-bg: #f4f4f5;
+    --hljs-fg: #18181b;
+    --hljs-comment: #71717a;
+    --hljs-keyword: #9333ea;
+    --hljs-string: #16a34a;
+    --hljs-number: #d97706;
+    --hljs-function: #2563eb;
+    --hljs-class: #0891b2;
+    --hljs-variable: #db2777;
+    --hljs-operator: #52525b;
+    --hljs-punctuation: #71717a;
+    --hljs-tag: #db2777;
+    --hljs-attr: #2563eb;
+    --hljs-attr-value: #16a34a;
+    --hljs-property: #18181b;
+    --hljs-built-in: #0891b2;
+    --hljs-meta: #52525b;
+    --hljs-title: #2563eb;
+    --hljs-type: #0891b2;
+    --hljs-selector: #9333ea;
+    --hljs-literal: #d97706;
+    --hljs-symbol: #db2777;
+    --hljs-line-number: #a1a1aa;
 }
 
 /* Dark theme is default for code blocks */

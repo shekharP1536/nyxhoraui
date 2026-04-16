@@ -657,6 +657,24 @@
             ]
         },
         {
+            "name": "background-lines",
+            "title": "Background Lines",
+            "description": "Animated SVG lines radiating from center with customizable color schemes including vibrant, neon, pastel, sunset, and ocean themes. Perfect for hero sections and landing pages. Nyxhora UI",
+            "type": "registry:ui",
+            "dependencies": [
+                "motion"
+            ],
+            "registryDependencies": [
+                "@/lib/utils"
+            ],
+            "files": [
+                {
+                    "path": "registry/ui/background-lines.tsx",
+                    "type": "registry:ui"
+                }
+            ]
+        },
+        {
             "name": "sparkles",
             "title": "Sparkles",
             "description": "A dynamic background component featuring animated particles that float across the screen. Perfect for adding a magical or festive touch to your website. Nyxhora UI",
