@@ -2,13 +2,14 @@
 import Content from "./_content";
 
 export const metadata = generateComponentMetadata({
+    slug: "calendar",
     name: "Calendar",
     description: "A date field component that allows users to enter and edit dates with an accessible calendar picker interface",
     category: "Form",
 });
 
 export default function Page() {
-    const faqSchema = generateComponentFAQSchema("Calendar", getDefaultComponentFAQs("Calendar"));
+    const faqSchema = generateComponentFAQSchema("Calendar", getDefaultComponentFAQs("Calendar", "calendar"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

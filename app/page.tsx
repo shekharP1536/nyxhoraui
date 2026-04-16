@@ -5,16 +5,31 @@ import HomeClient from "./home-client";
 export const metadata: Metadata = {
   title: "Nyxhora UI - Modern React Component Library | Tailwind CSS & Framer Motion",
   description:
-    "Build stunning websites with 75+ beautiful, accessible React UI components. Copy-paste components built with Tailwind CSS, Framer Motion, and Radix UI. The best free and open source shadcn/ui alternative for 2026.",
+    "Build stunning websites with beautiful, accessible React UI components. Copy-paste components built with Tailwind CSS, Framer Motion, and Radix UI. A free and open source shadcn/ui alternative.",
   alternates: {
     canonical: "https://ui.nyxhora.com",
   },
   openGraph: {
-    title: "Nyxhora UI - 75+ Modern React Components | Free & Open Source",
+    title: "Nyxhora UI - Modern React Components | Free & Open Source",
     description:
       "Copy-paste React UI components for Next.js. Beautiful, accessible, animated. Built with Tailwind CSS and Framer Motion. The shadcn alternative developers love.",
     url: "https://ui.nyxhora.com",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nyxhora UI - Modern React Component Library",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nyxhora UI - Modern React Component Library",
+    description:
+      "Copy-paste React UI components for Next.js. Beautiful, accessible, animated. Built with Tailwind CSS and Framer Motion.",
+    images: ["/og-image.png"],
   },
 };
 

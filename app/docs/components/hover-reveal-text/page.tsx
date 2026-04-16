@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "hover-reveal-text",
     name: "Hover Reveal Text",
     description: "An interactive text effect where characters blur and reveal as you hover, with a beautiful spreading effect to neighboring characters. Perfect for secret codes, teasers, and fun interactions.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function HoverRevealTextDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Hover Reveal Text", getDefaultComponentFAQs("Hover Reveal Text"));
+    const faqSchema = generateComponentFAQSchema("Hover Reveal Text", getDefaultComponentFAQs("Hover Reveal Text", "hover-reveal-text"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

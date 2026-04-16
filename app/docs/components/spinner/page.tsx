@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "spinner",
     name: "Spinner",
     description: "A loading spinner component with multiple variants.",
     category: "Display",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SpinnerDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Spinner", getDefaultComponentFAQs("Spinner"));
+    const faqSchema = generateComponentFAQSchema("Spinner", getDefaultComponentFAQs("Spinner", "spinner"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

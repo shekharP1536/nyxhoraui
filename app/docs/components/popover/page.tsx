@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "popover",
     name: "Popover",
     description: "Displays rich content in a portal, triggered by a button.",
     category: "Overlay",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function PopoverDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Popover", getDefaultComponentFAQs("Popover"));
+    const faqSchema = generateComponentFAQSchema("Popover", getDefaultComponentFAQs("Popover", "popover"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

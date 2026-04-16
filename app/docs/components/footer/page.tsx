@@ -4,6 +4,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "footer",
     name: "Footer",
     description: "A comprehensive footer component with brand section, social links, navigation columns, and legal links. Fully responsive and customizable.",
     category: "Navigation",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function FooterDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Footer", getDefaultComponentFAQs("Footer"));
+    const faqSchema = generateComponentFAQSchema("Footer", getDefaultComponentFAQs("Footer", "footer"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

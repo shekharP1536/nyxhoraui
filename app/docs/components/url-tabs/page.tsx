@@ -6,6 +6,7 @@ import { ComponentSource } from "@/registry/ui/component-source";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "url-tabs",
     name: "URL Tabs",
     description: "Enhanced Tabs component that syncs with URL parameters. Perfect for shareable tab states and deep linking.",
     category: "Navigation",
@@ -13,7 +14,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function UrlTabsDocsPage() {
-    const faqSchema = generateComponentFAQSchema("URL Tabs", getDefaultComponentFAQs("URL Tabs"));
+    const faqSchema = generateComponentFAQSchema("URL Tabs", getDefaultComponentFAQs("URL Tabs", "url-tabs"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

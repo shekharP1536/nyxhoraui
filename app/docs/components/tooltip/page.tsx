@@ -6,8 +6,15 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-
 import { ComponentSource } from "@/registry/ui/component-source";
 import DocsInstallation from "@/components/ui/docs-installation";
 
+export const metadata = generateComponentMetadata({
+    slug: "tooltip",
+    name: "Tooltip",
+    description: "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    category: "Overlay",
+});
+
 export default function TooltipDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Tooltip", getDefaultComponentFAQs("Tooltip"));
+    const faqSchema = generateComponentFAQSchema("Tooltip", getDefaultComponentFAQs("Tooltip", "tooltip"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -4,13 +4,14 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "background-beams",
     name: "Background Beams",
     description: "Animated SVG background beams with customizable gradient colors and animation speed for hero sections and landing pages",
     category: "Effects",
 });
 
 export default function BackgroundBeamsDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Background Beams", getDefaultComponentFAQs("Background Beams"));
+    const faqSchema = generateComponentFAQSchema("Background Beams", getDefaultComponentFAQs("Background Beams", "background-beams"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

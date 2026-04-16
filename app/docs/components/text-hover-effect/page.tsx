@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "text-hover-effect",
     name: "Text Hover Effect",
     description: "SVG text with animated stroke on load and a colorful gradient reveal effect on hover. Creates an engaging, interactive typography experience.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function TextHoverEffectDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Text Hover Effect", getDefaultComponentFAQs("Text Hover Effect"));
+    const faqSchema = generateComponentFAQSchema("Text Hover Effect", getDefaultComponentFAQs("Text Hover Effect", "text-hover-effect"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

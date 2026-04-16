@@ -1,4 +1,4 @@
-import { generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
+import { generateComponentMetadata, generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
 import { DocsHeader, DocsProps, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 import { ComponentSource } from "@/registry/ui/component-source";
 import {
@@ -10,8 +10,15 @@ import {
 } from "./sheet-demo";
 import DocsInstallation from "@/components/ui/docs-installation";
 
+export const metadata = generateComponentMetadata({
+    slug: "sheet",
+    name: "Sheet",
+    description: "Extends the Dialog component to display content that complements the main screen. Slides in from the edge of the viewport.",
+    category: "Overlay",
+});
+
 export default function SheetDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Sheet", getDefaultComponentFAQs("Sheet"));
+    const faqSchema = generateComponentFAQSchema("Sheet", getDefaultComponentFAQs("Sheet", "sheet"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

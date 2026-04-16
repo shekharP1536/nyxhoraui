@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview } from "@/c
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "separator",
     name: "Separator",
     description: "Visually or semantically separates content.",
     category: "Display",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SeparatorDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Separator", getDefaultComponentFAQs("Separator"));
+    const faqSchema = generateComponentFAQSchema("Separator", getDefaultComponentFAQs("Separator", "separator"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

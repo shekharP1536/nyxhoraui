@@ -1,10 +1,10 @@
 import { generateComponentMetadata, generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
 import { ParticleBurstButton } from "@/registry/ui/awesome-button";
-import { ComponentSource } from "@/registry/ui/component-source";
 import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "awesome-button",
     name: "Awesome Button",
     description: "A beautiful animated button with particle burst effects on click. Uses Framer Motion for smooth animations.",
     category: "Effects",
@@ -12,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function AwesomeButtonDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Awesome Button", getDefaultComponentFAQs("Awesome Button"));
+    const faqSchema = generateComponentFAQSchema("Awesome Button", getDefaultComponentFAQs("Awesome Button", "awesome-button"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },
@@ -45,12 +45,12 @@ export default function AwesomeButtonDocsPage() {
   Magic ✨
 </ParticleBurstButton>`}
       />
-      <DocsInstallation name="Awesome-button" />
+      <DocsInstallation name="awesome-button" />
 
 
       <CodeBlockWrapper
         title="Usage"
-        code={`import { ParticleBurstButton } from "@/registry/ui/Awesomebutton"
+        code={`import { ParticleBurstButton } from "@/registry/ui/awesome-button"
 
 export default function MyComponent() {
   return (

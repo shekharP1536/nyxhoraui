@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "image-grid",
     name: "Image Grid",
     description: "An interactive gallery that lets users swap the hero image by clicking on thumbnails.",
     category: "Display",
@@ -35,7 +36,7 @@ const items3 = [
 ];
 
 export default function ImageGridDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Image Grid", getDefaultComponentFAQs("Image Grid"));
+    const faqSchema = generateComponentFAQSchema("Image Grid", getDefaultComponentFAQs("Image Grid", "image-grid"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

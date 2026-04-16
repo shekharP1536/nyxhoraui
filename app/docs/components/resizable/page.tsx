@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "resizable",
     name: "Resizable",
     description: "Accessible resizable panel groups and layouts.",
     category: "Display",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ResizableDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Resizable", getDefaultComponentFAQs("Resizable"));
+    const faqSchema = generateComponentFAQSchema("Resizable", getDefaultComponentFAQs("Resizable", "resizable"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -5,6 +5,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "switch",
     name: "Switch",
     description: "A control that allows the user to toggle between checked and not checked.",
     category: "Form",
@@ -12,7 +13,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SwitchDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Switch", getDefaultComponentFAQs("Switch"));
+    const faqSchema = generateComponentFAQSchema("Switch", getDefaultComponentFAQs("Switch", "switch"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

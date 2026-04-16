@@ -5,8 +5,15 @@ import { Send } from "lucide-react";
 import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 
+export const metadata = generateComponentMetadata({
+    slug: "magic-button",
+    name: "Magic Button",
+    description: "A button with a magic border animation effect.",
+    category: "Effects",
+});
+
 export default function MagicButtonDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Magic Button", getDefaultComponentFAQs("Magic Button"));
+    const faqSchema = generateComponentFAQSchema("Magic Button", getDefaultComponentFAQs("Magic Button", "magic-button"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

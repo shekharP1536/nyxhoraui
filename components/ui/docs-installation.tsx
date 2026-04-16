@@ -6,11 +6,15 @@ import { InstallationCommand } from "./installation-command"
 interface RegistryItem {
   name: string
   registryDependencies?: string[]
+  dependencies?: string[]
   files?: Array<{ path: string; type: string }>
 }
 
 const DocsInstallation = ({ name }: { name: string }) => {
-  const item = (registryData as { items: RegistryItem[] }).items.find((item) => item.name === name)
+  const normalizedName = name.toLowerCase()
+  const item = (registryData as { items: RegistryItem[] }).items.find(
+    (registryItem) => registryItem.name.toLowerCase() === normalizedName
+  )
 
   if (!item) {
     return <div>Component not found in registry.</div>
@@ -21,7 +25,8 @@ const DocsInstallation = ({ name }: { name: string }) => {
   // The user's screenshot uses `npm install radix-ui` which is an external lib.
   // registry.json has `@/lib/utils`. That shouldn't be npm installed.
   // We should filter out dependencies starting with `@/`.
-  const externalDependencies = item.registryDependencies?.filter(dep => !dep.startsWith("@/")) || []
+  const dependencyList = item.registryDependencies ?? item.dependencies ?? []
+  const externalDependencies = dependencyList.filter(dep => !dep.startsWith("@/"))
 
   // For file source, if multiple files, currently only handling the first one or we could map them.
   // The screenshot implies "Copy and paste the following code into your project" and shows one file.
@@ -44,7 +49,7 @@ const DocsInstallation = ({ name }: { name: string }) => {
                 <p className="text-sm text-muted-foreground">
                   Use the CLI to add this component to your project.
                 </p>
-                <InstallationCommand dependencies={[name]} fornyxhora={true} />
+                <InstallationCommand dependencies={[item.name]} fornyxhora={true} />
               </div>
             </TabsContent>
             <TabsContent value="manual">

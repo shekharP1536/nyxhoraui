@@ -4,6 +4,7 @@ import DocsInstallation from "@/components/ui/docs-installation";
 import { SmoothCursorDemo } from "./smooth-cursor-demo";
 
 export const metadata = generateComponentMetadata({
+    slug: "smooth-cursor",
     name: "Smooth Cursor",
     description: "A smooth custom cursor that follows mouse movement with physics-based spring animations. Rotates based on movement direction.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SmoothCursorDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Smooth Cursor", getDefaultComponentFAQs("Smooth Cursor"));
+    const faqSchema = generateComponentFAQSchema("Smooth Cursor", getDefaultComponentFAQs("Smooth Cursor", "smooth-cursor"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

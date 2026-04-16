@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "ants-card",
     name: "Ants Card",
     description: "A delightful card component with animated ants walking around it. Perfect for adding a playful touch to your UI, onboarding screens, or empty states.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function AntsCardDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Ants Card", getDefaultComponentFAQs("Ants Card"));
+    const faqSchema = generateComponentFAQSchema("Ants Card", getDefaultComponentFAQs("Ants Card", "ants-card"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

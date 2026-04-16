@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "carousel",
     name: "Carousel",
     description: "A carousel with motion and swipe built using Embla.",
     category: "Display",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function CarouselDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Carousel", getDefaultComponentFAQs("Carousel"));
+    const faqSchema = generateComponentFAQSchema("Carousel", getDefaultComponentFAQs("Carousel", "carousel"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

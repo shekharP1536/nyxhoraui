@@ -4,6 +4,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "progress",
     name: "Progress",
     description: "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     category: "Display",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ProgressDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Progress", getDefaultComponentFAQs("Progress"));
+    const faqSchema = generateComponentFAQSchema("Progress", getDefaultComponentFAQs("Progress", "progress"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

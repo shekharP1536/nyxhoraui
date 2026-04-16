@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "theme-toggle",
     name: "Theme Toggle",
     description: "A button to toggle between light and dark modes.",
     category: "Display",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ThemeToggleDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Theme Toggle", getDefaultComponentFAQs("Theme Toggle"));
+    const faqSchema = generateComponentFAQSchema("Theme Toggle", getDefaultComponentFAQs("Theme Toggle", "theme-toggle"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

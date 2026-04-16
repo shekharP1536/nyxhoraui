@@ -4,6 +4,7 @@ import { DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "three-d-card",
     name: "3D Card",
     description: "A card that follows your mouse cursor and creates a 3D parallax effect.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ThreeDCardDocsPage() {
-    const faqSchema = generateComponentFAQSchema("3D Card", getDefaultComponentFAQs("3D Card"));
+    const faqSchema = generateComponentFAQSchema("3D Card", getDefaultComponentFAQs("3D Card", "three-d-card"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

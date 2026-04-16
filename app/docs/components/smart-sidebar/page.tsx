@@ -2,13 +2,14 @@
 import Content from "./_content";
 
 export const metadata = generateComponentMetadata({
+    slug: "smart-sidebar",
     name: "Smart Sidebar",
     description: "A modern dual-pane navigation system with primary icon sidebar and expandable secondary content panel for desktop apps",
     category: "Navigation",
 });
 
 export default function Page() {
-    const faqSchema = generateComponentFAQSchema("Smart Sidebar", getDefaultComponentFAQs("Smart Sidebar"));
+    const faqSchema = generateComponentFAQSchema("Smart Sidebar", getDefaultComponentFAQs("Smart Sidebar", "smart-sidebar"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

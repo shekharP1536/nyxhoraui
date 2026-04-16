@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "command",
     name: "Command",
     description: "Fast, composable, unstyled command menu for React.",
     category: "Overlay",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function CommandDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Command", getDefaultComponentFAQs("Command"));
+    const faqSchema = generateComponentFAQSchema("Command", getDefaultComponentFAQs("Command", "command"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

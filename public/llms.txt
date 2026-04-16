@@ -19,7 +19,7 @@ Replace `<component-name>` with the component slug, e.g., `button`, `magic-card`
 ## Why Choose Nyxhora UI in 2026?
 
 - 🚀 **Future-Proof Design:** Built for the latest React and Next.js, with modern patterns and best practices.
-- 🧩 **Composable & Modular:** 75+ components, each fully customizable and easy to integrate.
+- 🧩 **Composable & Modular:** A growing set of components, each fully customizable and easy to integrate.
 - 🎨 **Premium Visuals:** Stunning effects, animations, and accessibility out-of-the-box.
 - 🌙 **Dark Mode & Theming:** Seamless theme switching and full CSS variable support.
 - ♿ **Accessibility First:** WCAG-compliant, built on Radix UI primitives.
@@ -116,7 +116,7 @@ Replace `<component-name>` with the component slug, e.g., `button`, `magic-card`
 
 ## Tech Stack
 
-- **React 19** + **Next.js 15** (App Router)
+- **React 19** + **Next.js 16** (App Router)
 - **TypeScript** for full type safety
 - **Tailwind CSS v4** for styling
 - **Radix UI** for accessible primitives

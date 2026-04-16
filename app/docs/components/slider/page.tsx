@@ -10,6 +10,7 @@ import DocsInstallation from "@/components/ui/docs-installation";
 import { Label } from "@/registry/ui/label";
 
 export const metadata = generateComponentMetadata({
+    slug: "slider",
     name: "Slider",
     description: "An input for selecting a value from a range.",
     category: "Form",
@@ -17,7 +18,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SliderDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Slider", getDefaultComponentFAQs("Slider"));
+    const faqSchema = generateComponentFAQSchema("Slider", getDefaultComponentFAQs("Slider", "slider"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

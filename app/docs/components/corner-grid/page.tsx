@@ -1,11 +1,18 @@
-import { generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
+import { generateComponentMetadata, generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
 import { CornerGrid, CornerCard } from "@/registry/ui/corner-grid";
 import { DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 import { Box, Code, Layers, Zap } from "lucide-react";
 
+export const metadata = generateComponentMetadata({
+    slug: "corner-grid",
+    name: "Corner Grid",
+    description: "A responsive bento grid layout featuring clean, tech-inspired corner accents.",
+    category: "Effects",
+});
+
 export default function CornerGridDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Corner Grid", getDefaultComponentFAQs("Corner Grid"));
+    const faqSchema = generateComponentFAQSchema("Corner Grid", getDefaultComponentFAQs("Corner Grid", "corner-grid"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

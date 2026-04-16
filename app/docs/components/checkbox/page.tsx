@@ -7,6 +7,7 @@ import { ComponentSource } from "@/registry/ui/component-source";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "checkbox",
     name: "Checkbox",
     description: "A control that allows the user to toggle between checked and not checked.",
     category: "Form",
@@ -14,7 +15,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function CheckboxDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Checkbox", getDefaultComponentFAQs("Checkbox"));
+    const faqSchema = generateComponentFAQSchema("Checkbox", getDefaultComponentFAQs("Checkbox", "checkbox"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

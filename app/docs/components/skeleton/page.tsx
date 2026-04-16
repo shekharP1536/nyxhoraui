@@ -4,6 +4,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "skeleton",
     name: "Skeleton",
     description: "Use to show a placeholder while content is loading.",
     category: "Display",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SkeletonDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Skeleton", getDefaultComponentFAQs("Skeleton"));
+    const faqSchema = generateComponentFAQSchema("Skeleton", getDefaultComponentFAQs("Skeleton", "skeleton"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "variable-shadow-text",
     name: "Variable Shadow Text",
     description: "Interactive text that transitions between weight, slant, and shadow depth using variable font settings.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function VariableShadowTextDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Variable Shadow Text", getDefaultComponentFAQs("Variable Shadow Text"));
+    const faqSchema = generateComponentFAQSchema("Variable Shadow Text", getDefaultComponentFAQs("Variable Shadow Text", "variable-shadow-text"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

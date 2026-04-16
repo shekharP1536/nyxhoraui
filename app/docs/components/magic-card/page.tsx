@@ -4,8 +4,15 @@ import { MagicCard, MagicCardHeader, MagicCardTitle, MagicCardDescription, Magic
 import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 
+export const metadata = generateComponentMetadata({
+    slug: "magic-card",
+    name: "Magic Card",
+    description: "A card component with a magical spinning border effect and dark theme styling.",
+    category: "Effects",
+});
+
 export default function MagicCardDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Magic Card", getDefaultComponentFAQs("Magic Card"));
+    const faqSchema = generateComponentFAQSchema("Magic Card", getDefaultComponentFAQs("Magic Card", "magic-card"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

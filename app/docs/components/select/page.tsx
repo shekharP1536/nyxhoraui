@@ -13,6 +13,7 @@ import {
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "select",
     name: "Select",
     description: "Displays a list of options for the user to pick from—triggered by a button.",
     category: "Form",
@@ -20,7 +21,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SelectDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Select", getDefaultComponentFAQs("Select"));
+    const faqSchema = generateComponentFAQSchema("Select", getDefaultComponentFAQs("Select", "select"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

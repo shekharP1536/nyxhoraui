@@ -7,6 +7,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "tabs",
     name: "Tabs",
     description: "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
     category: "Navigation",
@@ -14,7 +15,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function TabsDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Tabs", getDefaultComponentFAQs("Tabs"));
+    const faqSchema = generateComponentFAQSchema("Tabs", getDefaultComponentFAQs("Tabs", "tabs"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -4,6 +4,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "avatar",
     name: "Avatar",
     description: "An image element with a fallback for representing the user.",
     category: "Display",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function AvatarDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Avatar", getDefaultComponentFAQs("Avatar"));
+    const faqSchema = generateComponentFAQSchema("Avatar", getDefaultComponentFAQs("Avatar", "avatar"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

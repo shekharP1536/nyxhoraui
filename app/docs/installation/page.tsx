@@ -15,9 +15,24 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Installation - Nyxhora UI",
         description:
-            "Get started with Nyxhora UI. Install 75+ React components in your Next.js project in minutes.",
+            "Get started with Nyxhora UI. Install React components in your Next.js project in minutes.",
         url: "https://ui.nyxhora.com/docs/installation",
         type: "article",
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "Install Nyxhora UI",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Installation - Nyxhora UI",
+        description:
+            "Get started with Nyxhora UI. Install React components in your Next.js project in minutes.",
+        images: ["/og-image.png"],
     },
     alternates: {
         canonical: "https://ui.nyxhora.com/docs/installation",

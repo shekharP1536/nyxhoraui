@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "glowing-dot-grid",
     name: "Glowing Dot Grid",
     description: "An interactive grid of dots that glow and expand on hover with beautiful proximity-based effects. Perfect for hero sections and interactive backgrounds.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function GlowingDotGridDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Glowing Dot Grid", getDefaultComponentFAQs("Glowing Dot Grid"));
+    const faqSchema = generateComponentFAQSchema("Glowing Dot Grid", getDefaultComponentFAQs("Glowing Dot Grid", "glowing-dot-grid"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "icon-picker",
     name: "Icon Picker",
     description: "A component to select icons from a library.",
     category: "Form",
@@ -10,7 +11,7 @@ export const metadata = generateComponentMetadata({
 // import { IconPicker } from "@/registry/ui/icon-picker";
 
 export default function IconPickerDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Icon Picker", getDefaultComponentFAQs("Icon Picker"));
+    const faqSchema = generateComponentFAQSchema("Icon Picker", getDefaultComponentFAQs("Icon Picker", "icon-picker"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

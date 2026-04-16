@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "spotlight",
     name: "Spotlight",
     description: "An animated spotlight effect that creates a dramatic lighting sweep. Perfect for hero sections and feature highlights.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SpotlightDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Spotlight", getDefaultComponentFAQs("Spotlight"));
+    const faqSchema = generateComponentFAQSchema("Spotlight", getDefaultComponentFAQs("Spotlight", "spotlight"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

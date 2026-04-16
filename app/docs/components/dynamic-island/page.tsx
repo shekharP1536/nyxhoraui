@@ -13,8 +13,15 @@ import {
 } from "./dynamic-island-demo";
 import DocsInstallation from "@/components/ui/docs-installation";
 
+export const metadata = generateComponentMetadata({
+    slug: "dynamic-island",
+    name: "Dynamic Island",
+    description: "A floating, expandable notification component inspired by Apple's Dynamic Island. Features notification stacking with navigation dots, dismissable vs persistent notifications, priority-based ordering, and auto-collapse.",
+    category: "Overlay",
+});
+
 export default function DynamicIslandDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Dynamic Island", getDefaultComponentFAQs("Dynamic Island"));
+    const faqSchema = generateComponentFAQSchema("Dynamic Island", getDefaultComponentFAQs("Dynamic Island", "dynamic-island"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

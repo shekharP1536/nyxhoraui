@@ -6,6 +6,7 @@ import { ComponentSource } from "@/registry/ui/component-source";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "alert",
     name: "Alert",
     description: "Displays a callout for user attention with various styles.",
     category: "Display",
@@ -13,7 +14,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function AlertDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Alert", getDefaultComponentFAQs("Alert"));
+    const faqSchema = generateComponentFAQSchema("Alert", getDefaultComponentFAQs("Alert", "alert"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

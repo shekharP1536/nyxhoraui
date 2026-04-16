@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "floating-navbar",
     name: "Floating Navbar",
     description: "A floating navigation bar that appears on scroll.",
     category: "Navigation",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function FloatingNavbarDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Floating Navbar", getDefaultComponentFAQs("Floating Navbar"));
+    const faqSchema = generateComponentFAQSchema("Floating Navbar", getDefaultComponentFAQs("Floating Navbar", "floating-navbar"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

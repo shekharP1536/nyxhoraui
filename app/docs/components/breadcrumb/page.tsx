@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "breadcrumb",
     name: "Breadcrumb",
     description: "Displays the path to the current resource using a hierarchy of links.",
     category: "Navigation",
@@ -10,7 +11,7 @@ export const metadata = generateComponentMetadata({
 // import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/registry/ui/breadcrumb";
 
 export default function BreadcrumbDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Breadcrumb", getDefaultComponentFAQs("Breadcrumb"));
+    const faqSchema = generateComponentFAQSchema("Breadcrumb", getDefaultComponentFAQs("Breadcrumb", "breadcrumb"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -7,6 +7,7 @@ import { ComponentSource } from "@/registry/ui/component-source";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "component-showcard",
     name: "Component Showcard",
     description: "A highly customizable card component for showcasing UI elements with gradients, badges, and interactive previews.",
     category: "Display",
@@ -14,7 +15,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ComponentShowcardDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Component Showcard", getDefaultComponentFAQs("Component Showcard"));
+    const faqSchema = generateComponentFAQSchema("Component Showcard", getDefaultComponentFAQs("Component Showcard", "component-showcard"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

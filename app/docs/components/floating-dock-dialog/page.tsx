@@ -4,13 +4,14 @@ import DocsInstallation from "@/components/ui/docs-installation";
 import { FloatingDockDialogDemo } from "./_demo";
 
 export const metadata = generateComponentMetadata({
+    slug: "floating-dock-dialog",
     name: "Floating Dock Dialog",
     description: "An enhanced floating dock with bottom sheet dialog, workspace cards, custom icons, colors, and spring physics animations.",
     category: "Navigation",
 });
 
 export default function FloatingDockDialogDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Floating Dock Dialog", getDefaultComponentFAQs("Floating Dock Dialog"));
+    const faqSchema = generateComponentFAQSchema("Floating Dock Dialog", getDefaultComponentFAQs("Floating Dock Dialog", "floating-dock-dialog"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

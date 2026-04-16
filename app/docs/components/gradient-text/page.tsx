@@ -5,6 +5,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "gradient-text",
     name: "Gradient Text",
     description: "A customizable text component with gradient fill.",
     category: "Effects",
@@ -12,7 +13,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function GradientTextDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Gradient Text", getDefaultComponentFAQs("Gradient Text"));
+    const faqSchema = generateComponentFAQSchema("Gradient Text", getDefaultComponentFAQs("Gradient Text", "gradient-text"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

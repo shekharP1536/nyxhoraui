@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "context-menu",
     name: "Context Menu",
     description: "Displays a menu to the user such as a set of actions or functions triggered by a right-click.",
     category: "Overlay",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ContextMenuDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Context Menu", getDefaultComponentFAQs("Context Menu"));
+    const faqSchema = generateComponentFAQSchema("Context Menu", getDefaultComponentFAQs("Context Menu", "context-menu"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

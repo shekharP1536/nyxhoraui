@@ -1,11 +1,18 @@
-import { generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
+import { generateComponentMetadata, generateComponentFAQSchema, getDefaultComponentFAQs, generateBreadcrumbSchema } from "@/lib/seo-config";
 import { ActionBar, ActionBarItem } from "@/registry/ui/action-bar";
 import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 import { Activity, Camera, Settings } from "lucide-react";
 
+export const metadata = generateComponentMetadata({
+    slug: "action-bar",
+    name: "Action Bar",
+    description: "An interactive list of expanding action items with glassmorphism effects, inspired by modern control centers.",
+    category: "Overlay",
+});
+
 export default function ActionBarDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Action Bar", getDefaultComponentFAQs("Action Bar"));
+    const faqSchema = generateComponentFAQSchema("Action Bar", getDefaultComponentFAQs("Action Bar", "action-bar"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

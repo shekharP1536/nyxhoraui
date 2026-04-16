@@ -5,6 +5,7 @@ import DocsInstallation from "@/components/ui/docs-installation";
 import { FloatingDock } from "@/registry/ui/floating-dock";
 
 export const metadata = generateComponentMetadata({
+    slug: "floating-dock",
     name: "Floating Dock",
     description: "A macOS-style dock with smooth hover animations, spring physics, and responsive mobile/desktop variants for app navigation.",
     category: "Navigation",
@@ -18,7 +19,7 @@ const dockItems = [
 ];
 
 export default function FloatingDockDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Floating Dock", getDefaultComponentFAQs("Floating Dock"));
+    const faqSchema = generateComponentFAQSchema("Floating Dock", getDefaultComponentFAQs("Floating Dock", "floating-dock"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

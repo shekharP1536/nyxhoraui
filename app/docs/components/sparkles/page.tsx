@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "sparkles",
     name: "Sparkles",
     description: "Animated particle sparkle effect using tsparticles. Creates a magical, twinkling background perfect for hero sections.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SparklesDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Sparkles", getDefaultComponentFAQs("Sparkles"));
+    const faqSchema = generateComponentFAQSchema("Sparkles", getDefaultComponentFAQs("Sparkles", "sparkles"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

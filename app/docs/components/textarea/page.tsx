@@ -5,6 +5,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "textarea",
     name: "Textarea",
     description: "A multi-line text input component.",
     category: "Form",
@@ -12,7 +13,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function TextareaDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Textarea", getDefaultComponentFAQs("Textarea"));
+    const faqSchema = generateComponentFAQSchema("Textarea", getDefaultComponentFAQs("Textarea", "textarea"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

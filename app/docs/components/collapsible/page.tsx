@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "collapsible",
     name: "Collapsible",
     description: "An interactive component which expands/collapses a panel.",
     category: "Display",
@@ -10,7 +11,7 @@ export const metadata = generateComponentMetadata({
 // import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/registry/ui/collapsible";
 
 export default function CollapsibleDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Collapsible", getDefaultComponentFAQs("Collapsible"));
+    const faqSchema = generateComponentFAQSchema("Collapsible", getDefaultComponentFAQs("Collapsible", "collapsible"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

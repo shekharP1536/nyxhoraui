@@ -6,6 +6,7 @@ import { ComponentSource } from "@/registry/ui/component-source";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "radio-group",
     name: "Radio Group",
     description: "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
     category: "Form",
@@ -13,7 +14,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function RadioGroupDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Radio Group", getDefaultComponentFAQs("Radio Group"));
+    const faqSchema = generateComponentFAQSchema("Radio Group", getDefaultComponentFAQs("Radio Group", "radio-group"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

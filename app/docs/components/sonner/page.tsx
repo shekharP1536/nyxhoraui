@@ -4,6 +4,7 @@ import DocsInstallation from "@/components/ui/docs-installation";
 import { SonnerDemo, SonnerExamples, SonnerPositionDemo } from "./sonner-demo";
 
 export const metadata = generateComponentMetadata({
+    slug: "sonner",
     name: "Sonner",
     description: "An opinionated toast component for React.",
     category: "Overlay",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SonnerDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Sonner", getDefaultComponentFAQs("Sonner"));
+    const faqSchema = generateComponentFAQSchema("Sonner", getDefaultComponentFAQs("Sonner", "sonner"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -5,6 +5,7 @@ import { ArrowRightIcon } from "lucide-react";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "animated-shiny-text",
     name: "Animated Shiny Text",
     description: "Text with an animated shimmer effect that creates a premium, dynamic appearance. Perfect for announcements and highlights.",
     category: "Effects",
@@ -12,7 +13,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function AnimatedShinyTextDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Animated Shiny Text", getDefaultComponentFAQs("Animated Shiny Text"));
+    const faqSchema = generateComponentFAQSchema("Animated Shiny Text", getDefaultComponentFAQs("Animated Shiny Text", "animated-shiny-text"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

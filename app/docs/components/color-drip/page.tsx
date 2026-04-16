@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "color-drip",
     name: "Color Drip",
     description: "Animated vertical lines with colorful dripping effects. Perfect for creating dynamic backgrounds with a matrix-like or rain-inspired aesthetic.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ColorDripDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Color Drip", getDefaultComponentFAQs("Color Drip"));
+    const faqSchema = generateComponentFAQSchema("Color Drip", getDefaultComponentFAQs("Color Drip", "color-drip"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -43,7 +43,7 @@ export const SEO_KEYWORDS = {
         "React loading spinner component",
         "Gradient background React component",
         "React tooltip component accessible",
-        "Next.js 15 UI components",
+        "Next.js 16 UI components",
         "React 19 component library",
         "Copy paste React components free",
         "Modern web app UI components",
@@ -95,7 +95,7 @@ export const WEBSITE_SCHEMA = {
     "@id": "https://ui.nyxhora.com/#website",
     url: "https://ui.nyxhora.com",
     name: "Nyxhora UI",
-    description: "A modern React UI component library with 70+ beautiful, accessible components built with Tailwind CSS and Framer Motion.",
+    description: "A modern React UI component library with beautiful, accessible components built with Tailwind CSS and Framer Motion.",
     publisher: { "@id": "https://ui.nyxhora.com/#organization" },
     potentialAction: {
         "@type": "SearchAction",
@@ -120,13 +120,13 @@ export const SOFTWARE_APPLICATION_SCHEMA = {
         priceCurrency: "USD",
         availability: "https://schema.org/InStock",
     },
-    description: "A comprehensive UI component library for React and Next.js featuring 70+ accessible, customizable components with built-in animations.",
+    description: "A comprehensive UI component library for React and Next.js featuring accessible, customizable components with built-in animations.",
     author: { "@id": "https://ui.nyxhora.com/#organization" },
     programmingLanguage: ["TypeScript", "JavaScript", "React", "CSS"],
     runtimePlatform: "Node.js",
     softwareRequirements: "React 18+, Next.js 14+, Tailwind CSS 3+, TypeScript 5+",
     featureList: [
-        "70+ UI Components",
+        "65+ UI Components",
         "Framer Motion Animations",
         "Tailwind CSS Styling",
         "Radix UI Accessibility",
@@ -141,7 +141,7 @@ export const SOFTWARE_SOURCE_CODE_SCHEMA = {
     "@type": "SoftwareSourceCode",
     "@id": "https://ui.nyxhora.com/#sourcecode",
     name: "Nyxhora UI",
-    codeRepository: "https://github.com/nyxhora/ui",
+    codeRepository: "https://github.com/nyxhora/nyxhora-ui",
     programmingLanguage: {
         "@type": "ComputerLanguage",
         name: "TypeScript",
@@ -168,6 +168,7 @@ export function getRootStructuredData() {
 // =============================================================================
 
 interface ComponentMetadataOptions {
+    slug?: string;
     name: string;
     description: string;
     category?: string;
@@ -178,10 +179,18 @@ interface ComponentMetadataOptions {
  * Generate SEO-optimized metadata for a component documentation page
  */
 export function generateComponentMetadata(options: ComponentMetadataOptions): Metadata {
-    const { name, description, category = "React", keywords = [] } = options;
+    const { slug: providedSlug, name, description, category = "React", keywords = [] } = options;
 
-    const title = `${name} Component - ${category} ${name} | Nyxhora UI`;
-    const fullDescription = `${description}. Copy-paste ${name} component for React & Next.js. Built with Tailwind CSS, Radix UI, and Framer Motion. Free and open source.`;
+    const normalizedDescription = description.trim().replace(/\s+/g, " ");
+    const sentenceDescription = /[.!?]$/.test(normalizedDescription)
+        ? normalizedDescription
+        : `${normalizedDescription}.`;
+
+    const title = `${name} Component - ${category} UI | Nyxhora UI`;
+    const fullDescription = `${sentenceDescription} Copy-paste ${name} component for React & Next.js. Built with Tailwind CSS, Radix UI, and Framer Motion. Free and open source.`;
+
+    const slug = (providedSlug || name.toLowerCase().replace(/\s+/g, "-")).toLowerCase().trim();
+    const slugQuery = slug.replace(/-/g, " ");
 
     const componentKeywords = [
         `${name.toLowerCase()} component`,
@@ -189,11 +198,13 @@ export function generateComponentMetadata(options: ComponentMetadataOptions): Me
         `nextjs ${name.toLowerCase()}`,
         `tailwind ${name.toLowerCase()}`,
         `${name.toLowerCase()} ui`,
+        `${slug} component`,
+        `react ${slugQuery} component`,
+        `next.js ${slugQuery}`,
         ...keywords,
         ...SEO_KEYWORDS.primary.slice(0, 5),
     ];
 
-    const slug = name.toLowerCase().replace(/\s+/g, "-");
     const pageUrl = `https://ui.nyxhora.com/docs/components/${slug}`;
 
     return {
@@ -206,14 +217,27 @@ export function generateComponentMetadata(options: ComponentMetadataOptions): Me
             type: "article",
             url: pageUrl,
             siteName: "Nyxhora UI",
+            images: [
+                {
+                    url: "/og-image.png",
+                    width: 1200,
+                    height: 630,
+                    alt: `${name} component preview`,
+                },
+            ],
         },
         twitter: {
             card: "summary_large_image",
             title,
             description: fullDescription,
+            images: ["/og-image.png"],
         },
         alternates: {
             canonical: pageUrl,
+        },
+        robots: {
+            index: true,
+            follow: true,
         },
     };
 }
@@ -303,11 +327,13 @@ export function generateTechArticleSchema(options: {
 // DEFAULT COMPONENT FAQs (reusable templates)
 // =============================================================================
 
-export function getDefaultComponentFAQs(componentName: string) {
+export function getDefaultComponentFAQs(componentName: string, componentSlug?: string) {
+    const installSlug = componentSlug?.trim() || componentName.toLowerCase().replace(/\s+/g, "-");
+
     return [
         {
             question: `How do I install the ${componentName} component?`,
-            answer: `You can install the ${componentName} component using the shadcn CLI: npx shadcn@latest add "https://ui.nyxhora.com/r/${componentName.toLowerCase().replace(/\s+/g, "-")}.json". Alternatively, copy the component code directly from the documentation.`,
+            answer: `You can install the ${componentName} component using the shadcn CLI: npx shadcn@latest add "https://ui.nyxhora.com/r/${installSlug}.json". Alternatively, copy the component code directly from the documentation.`,
         },
         {
             question: `Is the ${componentName} component accessible?`,
@@ -319,7 +345,7 @@ export function getDefaultComponentFAQs(componentName: string) {
         },
         {
             question: `Does the ${componentName} component work with Next.js?`,
-            answer: `Yes, all Nyxhora UI components including ${componentName} are fully compatible with Next.js 14+ (including Next.js 15), supporting both the App Router and Pages Router.`,
+            answer: `Yes, all Nyxhora UI components including ${componentName} are fully compatible with Next.js 14+ (including Next.js 16), supporting both the App Router and Pages Router.`,
         },
     ];
 }

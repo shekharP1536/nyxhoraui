@@ -5,6 +5,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "magic-text",
     name: "Magic Text",
     description: "A text component with a magical spinning gradient fill effect.",
     category: "Effects",
@@ -12,7 +13,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function MagicTextDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Magic Text", getDefaultComponentFAQs("Magic Text"));
+    const faqSchema = generateComponentFAQSchema("Magic Text", getDefaultComponentFAQs("Magic Text", "magic-text"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

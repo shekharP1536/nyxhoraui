@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "toggle",
     name: "Toggle",
     description: "A two-state button that can be either on or off.",
     category: "Form",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ToggleDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Toggle", getDefaultComponentFAQs("Toggle"));
+    const faqSchema = generateComponentFAQSchema("Toggle", getDefaultComponentFAQs("Toggle", "toggle"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

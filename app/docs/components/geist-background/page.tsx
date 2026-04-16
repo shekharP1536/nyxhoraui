@@ -4,6 +4,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "geist-background",
     name: "Geist Background",
     description: "A mesmerizing flickering background effect with noise mask and conic gradients, inspired by Vercel's Geist design.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function GeistBackgroundDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Geist Background", getDefaultComponentFAQs("Geist Background"));
+    const faqSchema = generateComponentFAQSchema("Geist Background", getDefaultComponentFAQs("Geist Background", "geist-background"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Nyxhora UI",
   },
   metadataBase: new URL("https://ui.nyxhora.com"),
-  description: "70+ beautiful, accessible React UI components for Next.js. Copy-paste components built with Tailwind CSS, Framer Motion, and Radix UI. Free and open source alternative to shadcn/ui with stunning animations.",
+  description: "Beautiful, accessible React UI components for Next.js. Copy-paste components built with Tailwind CSS, Framer Motion, and Radix UI. Free and open source alternative to shadcn/ui with stunning animations.",
   keywords: [
     // Primary keywords
     "React UI component library",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ui.nyxhora.com",
-    title: "Nyxhora UI - 70+ Modern React Components | Tailwind CSS & Framer Motion",
+    title: "Nyxhora UI - Modern React Components | Tailwind CSS & Framer Motion",
     description: "Copy-paste React UI components for Next.js. Beautiful, accessible, and animated. Built with Tailwind CSS and Framer Motion. Free and open source.",
     siteName: "Nyxhora UI",
     images: [
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nyxhora UI - 70+ React Components with Animations",
+    title: "Nyxhora UI - Modern React Components",
     description: "Copy-paste UI components for Next.js. Beautiful, accessible, and built with Tailwind CSS. Free and open source.",
     creator: "@nyxhora",
     site: "@nyxhora",

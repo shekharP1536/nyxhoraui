@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "comet-card",
     name: "Comet Card",
     description: "A card with an animated comet effect border.",
     category: "Effects",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function CometCardDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Comet Card", getDefaultComponentFAQs("Comet Card"));
+    const faqSchema = generateComponentFAQSchema("Comet Card", getDefaultComponentFAQs("Comet Card", "comet-card"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -6,6 +6,7 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "input",
     name: "Input",
     description: "Displays a form input field or a component that looks like an input field.",
     category: "Form",
@@ -13,7 +14,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function InputDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Input", getDefaultComponentFAQs("Input"));
+    const faqSchema = generateComponentFAQSchema("Input", getDefaultComponentFAQs("Input", "input"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

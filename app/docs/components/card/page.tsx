@@ -7,8 +7,15 @@ import { Bell, CreditCard } from "lucide-react";
 import { CodeBlockWrapper, DocsHeader, DocsPreview, DocsProps } from "@/components/ui/docs-documentation";
 import DocsInstallation from "@/components/ui/docs-installation";
 
+export const metadata = generateComponentMetadata({
+    slug: "card",
+    name: "Card",
+    description: "Displays a card with header, content, and footer sections.",
+    category: "Display",
+});
+
 export default function CardDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Card", getDefaultComponentFAQs("Card"));
+    const faqSchema = generateComponentFAQSchema("Card", getDefaultComponentFAQs("Card", "card"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

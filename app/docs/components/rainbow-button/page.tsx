@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "rainbow-button",
     name: "Rainbow Button",
     description: "A stunning animated button with rainbow gradient border, text, and glow effects. The gradient animates on hover for an eye-catching call-to-action.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function RainbowButtonDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Rainbow Button", getDefaultComponentFAQs("Rainbow Button"));
+    const faqSchema = generateComponentFAQSchema("Rainbow Button", getDefaultComponentFAQs("Rainbow Button", "rainbow-button"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

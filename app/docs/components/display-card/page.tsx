@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "display-card",
     name: "Display Card",
     description: "Enhanced card component for displaying content.",
     category: "Display",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function DisplayCardDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Display Card", getDefaultComponentFAQs("Display Card"));
+    const faqSchema = generateComponentFAQSchema("Display Card", getDefaultComponentFAQs("Display Card", "display-card"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

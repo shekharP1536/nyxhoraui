@@ -27,12 +27,21 @@ export const metadata: Metadata = {
       "Build beautiful interfaces with modern, accessible React components.",
     type: "website",
     siteName: "Nyxhora UI",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nyxhora UI Documentation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nyxhora UI Documentation",
     description:
       "Build beautiful interfaces with modern, accessible React components.",
+    images: ["/og-image.png"],
   },
 };
 

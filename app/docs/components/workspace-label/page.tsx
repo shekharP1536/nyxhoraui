@@ -4,13 +4,14 @@ import DocsInstallation from "@/components/ui/docs-installation";
 import { WorkspaceLabelDemo } from "./_demo";
 
 export const metadata = generateComponentMetadata({
+    slug: "workspace-label",
     name: "Workspace Label",
     description: "A workspace switcher with member avatars, pending request notifications, info card panel, and keyboard shortcuts.",
     category: "Navigation",
 });
 
 export default function WorkspaceLabelDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Workspace Label", getDefaultComponentFAQs("Workspace Label"));
+    const faqSchema = generateComponentFAQSchema("Workspace Label", getDefaultComponentFAQs("Workspace Label", "workspace-label"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

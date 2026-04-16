@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "code-block",
     name: "Code Block",
     description: "A beautiful code snippet component with syntax highlighting and copy functionality.",
     category: "Display",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function CodeBlockDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Code Block", getDefaultComponentFAQs("Code Block"));
+    const faqSchema = generateComponentFAQSchema("Code Block", getDefaultComponentFAQs("Code Block", "code-block"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

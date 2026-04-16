@@ -15,6 +15,7 @@ import {
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+  slug: "background-lines",
   name: "Background Lines",
   description:
     "Animated lines radiating from center with customizable color schemes like neon, pastel, sunset, and ocean themes",
@@ -24,7 +25,7 @@ export const metadata = generateComponentMetadata({
 export default function BackgroundLinesDocsPage() {
   const faqSchema = generateComponentFAQSchema(
     "Background Lines",
-    getDefaultComponentFAQs("Background Lines"),
+    getDefaultComponentFAQs("Background Lines", "background-lines"),
   );
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "https://ui.nyxhora.com" },

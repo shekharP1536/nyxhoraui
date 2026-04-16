@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "spotlight-text",
     name: "Spotlight Text",
     description: "Text that acts as a stencil, revealing a fluid, interactive background spotlight effect.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function SpotlightTextDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Spotlight Text", getDefaultComponentFAQs("Spotlight Text"));
+    const faqSchema = generateComponentFAQSchema("Spotlight Text", getDefaultComponentFAQs("Spotlight Text", "spotlight-text"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

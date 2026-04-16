@@ -7,8 +7,15 @@ import { CodeBlockWrapper, DocsHeader, DocsPreview } from "@/components/ui/docs-
 import { ComponentSource } from "@/registry/ui/component-source";
 import DocsInstallation from "@/components/ui/docs-installation";
 
+export const metadata = generateComponentMetadata({
+    slug: "dialog",
+    name: "Dialog",
+    description: "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
+    category: "Overlay",
+});
+
 export default function DialogDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Dialog", getDefaultComponentFAQs("Dialog"));
+    const faqSchema = generateComponentFAQSchema("Dialog", getDefaultComponentFAQs("Dialog", "dialog"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

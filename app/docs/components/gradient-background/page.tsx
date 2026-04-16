@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "gradient-background",
     name: "Gradient Background",
     description: "A configurable, positioned gradient blur effect for backgrounds.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function GradientBackgroundDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Gradient Background", getDefaultComponentFAQs("Gradient Background"));
+    const faqSchema = generateComponentFAQSchema("Gradient Background", getDefaultComponentFAQs("Gradient Background", "gradient-background"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

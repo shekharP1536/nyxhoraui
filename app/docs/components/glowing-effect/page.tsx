@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "glowing-effect",
     name: "Glowing Effect",
     description: "An interactive glow effect that follows mouse movement with customizable colors, intensity, and animation styles.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function GlowingEffectDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Glowing Effect", getDefaultComponentFAQs("Glowing Effect"));
+    const faqSchema = generateComponentFAQSchema("Glowing Effect", getDefaultComponentFAQs("Glowing Effect", "glowing-effect"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

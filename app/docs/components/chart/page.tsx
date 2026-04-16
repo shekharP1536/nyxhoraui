@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "chart",
     name: "Chart",
     description: "Beautiful charts built with Recharts and Tailwind CSS.",
     category: "Display",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ChartDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Chart", getDefaultComponentFAQs("Chart"));
+    const faqSchema = generateComponentFAQSchema("Chart", getDefaultComponentFAQs("Chart", "chart"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

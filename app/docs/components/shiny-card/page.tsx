@@ -21,6 +21,7 @@ import {
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+  slug: "shiny-card",
   name: "Shiny Card",
   description: "A card component with a shimmering shiny border effect.",
   category: "Effects",
@@ -29,7 +30,7 @@ export const metadata = generateComponentMetadata({
 export default function ShinyCardDocsPage() {
   const faqSchema = generateComponentFAQSchema(
     "Shiny Card",
-    getDefaultComponentFAQs("Shiny Card"),
+    getDefaultComponentFAQs("Shiny Card", "shiny-card"),
   );
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "https://ui.nyxhora.com" },

@@ -5,6 +5,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview } from "@/c
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "label",
     name: "Label",
     description: "Renders an accessible label for form controls.",
     category: "Form",
@@ -12,7 +13,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function LabelDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Label", getDefaultComponentFAQs("Label"));
+    const faqSchema = generateComponentFAQSchema("Label", getDefaultComponentFAQs("Label", "label"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

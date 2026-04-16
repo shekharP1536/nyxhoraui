@@ -137,7 +137,7 @@
             ]
         },
         {
-            "name": "Awesome-button",
+            "name": "awesome-button",
             "title": "Awesome Button",
             "description": "Awesome Button component",
             "type": "registry:ui",

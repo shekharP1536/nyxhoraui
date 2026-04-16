@@ -4,6 +4,7 @@ import { ComponentPreview, DocsHeader, DocsPreview, DocsProps } from "@/componen
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "image-slider",
     name: "Image Slider",
     description: "A responsive, customizable image slider with support for swipes, autoplay, and thumbnails.",
     category: "Display",
@@ -18,7 +19,7 @@ const images = [
 ];
 
 export default function ImageSliderDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Image Slider", getDefaultComponentFAQs("Image Slider"));
+    const faqSchema = generateComponentFAQSchema("Image Slider", getDefaultComponentFAQs("Image Slider", "image-slider"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

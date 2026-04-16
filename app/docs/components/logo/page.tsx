@@ -3,6 +3,7 @@ import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation
 import { User } from "lucide-react";
 
 export const metadata = generateComponentMetadata({
+    slug: "logo",
     name: "Logo",
     description: "A branded logo component.",
     category: "Display",
@@ -10,7 +11,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function LogoDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Logo", getDefaultComponentFAQs("Logo"));
+    const faqSchema = generateComponentFAQSchema("Logo", getDefaultComponentFAQs("Logo", "logo"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

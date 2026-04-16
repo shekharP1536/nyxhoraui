@@ -5,7 +5,7 @@ import { CodeBlockWrapper, DocsHeader } from "@/components/ui/docs-documentation
 
 export const metadata: Metadata = {
     title: "Introduction",
-    description: "Welcome to Nyxhora UI — A modern React component library built on shadcn/ui with 90+ enhanced, production-ready components for Next.js applications.",
+    description: "Welcome to Nyxhora UI — A modern React component library built on shadcn/ui with enhanced, production-ready components for Next.js applications.",
     keywords: [
         "Nyxhora UI introduction",
         "React component library",
@@ -15,10 +15,24 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         title: "Introduction to Nyxhora UI",
-        description: "Discover Nyxhora UI — 90+ beautiful, accessible React components built with Tailwind CSS, Radix UI, and Framer Motion.",
+        description: "Discover Nyxhora UI — beautiful, accessible React components built with Tailwind CSS, Radix UI, and Framer Motion.",
         type: "article",
         url: "https://ui.nyxhora.com/docs",
         siteName: "Nyxhora UI",
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "Nyxhora UI Documentation",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Nyxhora UI Documentation",
+        description: "Build beautiful interfaces with modern, accessible React components.",
+        images: ["/og-image.png"],
     },
     alternates: {
         canonical: "https://ui.nyxhora.com/docs",
@@ -75,7 +89,7 @@ export default function DocsIntroductionPage() {
                             What&apos;s Inside?
                         </h2>
                         <p className="text-sm text-muted-foreground">
-                            <strong>90+</strong> base shadcn/ui components + <strong>custom enhanced components</strong> including
+                            Base shadcn/ui components + <strong>custom enhanced components</strong> including
                             Smart Sidebar, Floating Dock, Workspace Switcher, URL Tabs, and more all designed for modern desktop web apps.
                         </p>
                     </div>

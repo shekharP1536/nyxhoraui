@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "bento-grid",
     name: "Bento Grid",
     description: "A bento-style grid layout component.",
     category: "Display",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function BentoGridDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Bento Grid", getDefaultComponentFAQs("Bento Grid"));
+    const faqSchema = generateComponentFAQSchema("Bento Grid", getDefaultComponentFAQs("Bento Grid", "bento-grid"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

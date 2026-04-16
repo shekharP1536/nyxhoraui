@@ -2,13 +2,14 @@
 import Content from "./_content";
 
 export const metadata = generateComponentMetadata({
+    slug: "exit-confirmation-modal",
     name: "Exit Confirmation Modal",
     description: "A modal dialog that prompts users for confirmation when attempting to leave a page with unsaved changes",
     category: "Overlay",
 });
 
 export default function Page() {
-    const faqSchema = generateComponentFAQSchema("Exit Confirmation Modal", getDefaultComponentFAQs("Exit Confirmation Modal"));
+    const faqSchema = generateComponentFAQSchema("Exit Confirmation Modal", getDefaultComponentFAQs("Exit Confirmation Modal", "exit-confirmation-modal"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

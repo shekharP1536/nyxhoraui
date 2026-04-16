@@ -7,6 +7,7 @@ import { MenuDemo } from "./navbarMenuDemo";
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "navbar-menu",
     name: "Navbar Menu",
     description: "Animated dropdown menu components for navigation with smooth spring animations and hover effects.",
     category: "Navigation",
@@ -31,7 +32,7 @@ function FeatureCard({ icon: Icon, title, description }: { icon: any; title: str
 
 
 export default function NavbarMenuDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Navbar Menu", getDefaultComponentFAQs("Navbar Menu"));
+    const faqSchema = generateComponentFAQSchema("Navbar Menu", getDefaultComponentFAQs("Navbar Menu", "navbar-menu"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

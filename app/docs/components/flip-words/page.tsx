@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "flip-words",
     name: "Flip Words",
     description: "Animated word cycling component that flips through an array of words with smooth letter-by-letter animations.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function FlipWordsDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Flip Words", getDefaultComponentFAQs("Flip Words"));
+    const faqSchema = generateComponentFAQSchema("Flip Words", getDefaultComponentFAQs("Flip Words", "flip-words"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -3,6 +3,7 @@ import { DocsHeader, DocsPreview, CodeBlockWrapper } from "@/components/ui/docs-
 import { ScrollArea } from "@/registry/ui/scroll-area";
 
 export const metadata = generateComponentMetadata({
+    slug: "scroll-area",
     name: "Scroll Area",
     description: "Augments native scroll functionality for custom, cross-browser styling.",
     category: "Display",
@@ -10,7 +11,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ScrollAreaDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Scroll Area", getDefaultComponentFAQs("Scroll Area"));
+    const faqSchema = generateComponentFAQSchema("Scroll Area", getDefaultComponentFAQs("Scroll Area", "scroll-area"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

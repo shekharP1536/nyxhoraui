@@ -196,7 +196,9 @@ export const Navbar = () => {
               />
 
               <Link
-                href="/app"
+                href="https://www.nyxhora.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-center w-full gap-2 px-4 py-2.5 text-sm font-medium text-white bg-neutral-900 dark:bg-white dark:text-neutral-900 rounded-lg hover:opacity-90 transition-opacity"
               >

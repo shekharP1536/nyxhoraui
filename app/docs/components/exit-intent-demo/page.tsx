@@ -19,8 +19,15 @@ import {
 } from "./exit-intent-docs-demo";
 import DocsInstallation from "@/components/ui/docs-installation";
 
+export const metadata = generateComponentMetadata({
+    slug: "exit-intent-demo",
+    name: "Exit Intent",
+    description: "A protection system that detects when users attempt to leave the page and shows confirmation dialogs to prevent accidental navigation.",
+    category: "Overlay",
+});
+
 export default function ExitIntentDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Exit Intent", getDefaultComponentFAQs("Exit Intent"));
+    const faqSchema = generateComponentFAQSchema("Exit Intent", getDefaultComponentFAQs("Exit Intent", "exit-intent"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

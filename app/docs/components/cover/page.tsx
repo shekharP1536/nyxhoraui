@@ -12,6 +12,7 @@ import {
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "cover",
     name: "Cover",
     description: "A flexible cover component for displaying featured images with optional action buttons for changing or removing the cover.",
     category: "Display",
@@ -19,7 +20,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function CoverDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Cover", getDefaultComponentFAQs("Cover"));
+    const faqSchema = generateComponentFAQSchema("Cover", getDefaultComponentFAQs("Cover", "cover"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

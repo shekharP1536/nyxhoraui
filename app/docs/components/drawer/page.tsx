@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "drawer",
     name: "Drawer",
     description: "A drawer component for React.",
     category: "Overlay",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function DrawerDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Drawer", getDefaultComponentFAQs("Drawer"));
+    const faqSchema = generateComponentFAQSchema("Drawer", getDefaultComponentFAQs("Drawer", "drawer"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

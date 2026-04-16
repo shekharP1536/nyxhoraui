@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "badge",
     name: "Badge",
     description: "Displays a badge or a component that looks like a badge.",
     category: "Display",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function BadgeDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Badge", getDefaultComponentFAQs("Badge"));
+    const faqSchema = generateComponentFAQSchema("Badge", getDefaultComponentFAQs("Badge", "badge"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

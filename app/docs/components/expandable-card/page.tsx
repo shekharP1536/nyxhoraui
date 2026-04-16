@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "expandable-card",
     name: "Expandable Card",
     description: "Card content that can expand to show more details.",
     category: "Effects",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ExpandableCardDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Expandable Card", getDefaultComponentFAQs("Expandable Card"));
+    const faqSchema = generateComponentFAQSchema("Expandable Card", getDefaultComponentFAQs("Expandable Card", "expandable-card"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

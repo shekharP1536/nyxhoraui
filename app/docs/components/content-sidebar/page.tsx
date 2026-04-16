@@ -2,6 +2,7 @@ import { generateComponentMetadata, generateComponentFAQSchema, getDefaultCompon
 import { DocsHeader, CodeBlockWrapper } from "@/components/ui/docs-documentation";
 
 export const metadata = generateComponentMetadata({
+    slug: "content-sidebar",
     name: "Content Sidebar",
     description: "A sidebar designed for navigating content structures.",
     category: "Navigation",
@@ -9,7 +10,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ContentSidebarDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Content Sidebar", getDefaultComponentFAQs("Content Sidebar"));
+    const faqSchema = generateComponentFAQSchema("Content Sidebar", getDefaultComponentFAQs("Content Sidebar", "content-sidebar"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

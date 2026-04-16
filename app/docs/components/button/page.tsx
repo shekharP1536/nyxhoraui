@@ -5,6 +5,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "button",
     name: "Button",
     description: "Displays a button or a component that looks like a button.",
     category: "Form",
@@ -12,7 +13,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ButtonDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Button", getDefaultComponentFAQs("Button"));
+    const faqSchema = generateComponentFAQSchema("Button", getDefaultComponentFAQs("Button", "button"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

@@ -6,6 +6,7 @@ import { ComponentSource } from "@/registry/ui/component-source";
 import { NavbarDemo } from "./navbarDemo";
 
 export const metadata = generateComponentMetadata({
+    slug: "navbar",
     name: "Navbar",
     description: "A responsive navigation bar component with glassmorphism effects, mobile menu support, and smooth animations.",
     category: "Navigation",
@@ -30,7 +31,7 @@ function FeatureCard({ icon: Icon, title, description }: { icon: any; title: str
 
 
 export default function NavbarDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Navbar", getDefaultComponentFAQs("Navbar"));
+    const faqSchema = generateComponentFAQSchema("Navbar", getDefaultComponentFAQs("Navbar", "navbar"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

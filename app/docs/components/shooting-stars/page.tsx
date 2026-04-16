@@ -4,6 +4,7 @@ import { CodeBlockWrapper, ComponentPreview, DocsHeader, DocsPreview, DocsProps 
 import DocsInstallation from "@/components/ui/docs-installation";
 
 export const metadata = generateComponentMetadata({
+    slug: "shooting-stars",
     name: "Shooting Stars",
     description: "A beautiful animated starfield background with shooting stars effect. Perfect for hero sections, landing pages, and space-themed designs.",
     category: "Effects",
@@ -11,7 +12,7 @@ export const metadata = generateComponentMetadata({
 
 
 export default function ShootingStarsDocsPage() {
-    const faqSchema = generateComponentFAQSchema("Shooting Stars", getDefaultComponentFAQs("Shooting Stars"));
+    const faqSchema = generateComponentFAQSchema("Shooting Stars", getDefaultComponentFAQs("Shooting Stars", "shooting-stars"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },

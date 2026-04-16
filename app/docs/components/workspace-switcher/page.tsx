@@ -2,13 +2,14 @@
 import Content from "./_content";
 
 export const metadata = generateComponentMetadata({
+    slug: "workspace-switcher",
     name: "Workspace Switcher",
     description: "A macOS-style workspace cycling overlay with keyboard shortcuts smooth animations and visual feedback",
     category: "Navigation",
 });
 
 export default function Page() {
-    const faqSchema = generateComponentFAQSchema("Workspace Switcher", getDefaultComponentFAQs("Workspace Switcher"));
+    const faqSchema = generateComponentFAQSchema("Workspace Switcher", getDefaultComponentFAQs("Workspace Switcher", "workspace-switcher"));
     const breadcrumbSchema = generateBreadcrumbSchema([
         { name: "Home", url: "https://ui.nyxhora.com" },
         { name: "Docs", url: "https://ui.nyxhora.com/docs" },
